@@ -150,7 +150,7 @@ export const DAYS: Day[] = [
 ];
 
 export const WORKOUTS: Workout[] = [
-  {iso: "2026-11-02", date: "Mon 2 Nov", time: "20:18", sport: "weightlifting", mins: 36, strain: 9.6, avg: 119, max: 149, kcal: 174},
+  {iso: "2026-11-02", date: "Mon 2 Nov", time: "20:18", sport: "weightlifting", mins: 36, strain: 9.6, avg: 119, max: 149, kcal: 174, notes: "Chest press 3 sets, tricep pushdowns 3 sets, pull-ups 3 sets"},
   {iso: "2026-11-02", date: "Mon 2 Nov", time: "19:56", sport: "activity", mins: 22, strain: 4.3, avg: 104, max: 130, kcal: 37},
   {iso: "2026-11-02", date: "Mon 2 Nov", time: "04:04", sport: "walking", mins: 15, strain: 4.5, avg: 114, max: 124, kcal: 54},
   {iso: "2026-11-01", date: "Sun 1 Nov", time: "20:51", sport: "walking", mins: 52, strain: 7.7, avg: 127, max: 147, kcal: 337},
