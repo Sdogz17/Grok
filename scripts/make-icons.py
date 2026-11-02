@@ -5,8 +5,8 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1] / "public"
-SAGE = (47, 94, 69, 255)
-INK = (242, 246, 243, 255)
+SAGE = (25, 25, 25, 255)
+INK = (247, 246, 243, 255)
 FONT = "/usr/share/fonts/truetype/noto/NotoSans-Bold.ttf"
 
 

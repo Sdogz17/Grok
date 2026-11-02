@@ -174,7 +174,7 @@ export default function App() {
             </div>
           ))}
           {cells.map((dayNumber, index) => {
-            if (dayNumber === null) return <div key={`empty-${index}`} />;
+            if (dayNumber === null) return <div key={`empty-${index}`} className="cell-empty" />;
             const iso = isoDate(month, dayNumber);
             const record = byDate.get(iso);
             const tone = toneClass(record);
@@ -258,7 +258,9 @@ export default function App() {
               </div>
               <div className="dialog-body">
                 <div className="tally">
-                  <span className="tally-num">{selectedDay ? selectedDay.count : 0}</span>
+                  <span className={["tally-num", toneClass(selectedDay)].filter(Boolean).join(" ")}>
+                    {selectedDay ? selectedDay.count : 0}
+                  </span>
                   <span className="tally-of">of {GOAL} words</span>
                 </div>
                 {selectedDay ? (

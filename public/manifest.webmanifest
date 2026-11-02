@@ -6,8 +6,8 @@
   "start_url": "/Grok/",
   "scope": "/Grok/",
   "display": "standalone",
-  "background_color": "#e7e6e1",
-  "theme_color": "#e7e6e1",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
   "lang": "en",
   "icons": [
     {
