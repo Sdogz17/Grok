@@ -1,3 +1,10 @@
+# Grok
+
+Two installable phone apps, published from one build.
+
+- [Mandarin](https://sdogz17.github.io/Grok/) is a study calendar.
+- [Health](https://sdogz17.github.io/Grok/health/) is a sleep and training calendar.
+
 # Mandarin
 
 A study calendar of words learned each day, written in pinyin, against a goal of 10. It is a small installable web app for a phone home screen.
@@ -46,20 +53,39 @@ npm run build
 npm run preview
 ```
 
-## Publish
-
-GitHub Actions builds the app and deploys it to GitHub Pages on every push to `main`. The site is https://sdogz17.github.io/Grok/ .
-
-Pages will not update until these are true:
-
-1. The repository is **public**. GitHub Pages is free only on public repositories. This repo is private, so a free site will not serve until you change that: **Settings → General → Danger zone → Change repository visibility → Public**. The study log is in the repo, so a public repo makes those notes public too.
-2. **Settings → Pages → Build and deployment → Source** is **GitHub Actions**.
-3. The workflow on `main` has finished. **Actions** shows “Deploy GitHub Pages”. The first run can sit on a “Waiting for review” environment approval; approve it if GitHub asks.
-
-Merging the pull request into `main` is what triggers the deploy. The preview branch itself is not published.
-
 ## Install on a Samsung phone
 
 In Chrome, open https://sdogz17.github.io/Grok/ . Use the menu and choose **Install app** or **Add to Home screen**. The icon is labelled Mandarin and the app opens full screen, without the browser bar.
+
+Light and dark follow the phone’s theme.
+
+## Publish
+
+GitHub Actions builds both apps and deploys them to GitHub Pages on every push to `main`. Mandarin is https://sdogz17.github.io/Grok/ and Health is https://sdogz17.github.io/Grok/health/ .
+
+`npm run build` typechecks and builds Mandarin first, then Health, and writes Health into `dist/health`. The Pages workflow uploads that `dist` folder. It does not need a separate job.
+
+The repository is public, so the study log and the health log are publicly readable. Health includes sleep scores, heart rate, workouts and diet notes.
+
+Pages will not update until these are true:
+
+1. **Settings → Pages → Build and deployment → Source** is **GitHub Actions**.
+2. The workflow on `main` has finished. **Actions** shows “Deploy GitHub Pages”. The first run can sit on a “Waiting for review” environment approval; approve it if GitHub asks.
+
+Merging the pull request into `main` is what triggers the deploy. The preview branch itself is not published.
+
+## Health
+
+A month calendar of Whoop sleep and recovery, with lift days and walks marked, and the log for the day you tap. Weeks run Monday to Sunday. The lift goal is 4. Food targets are 1,800 kcal and 100 to 130 g protein.
+
+Edit `health/src/data/log.ts`. That is the only file you need to change. `TODAY_ISO` is the day the calendar treats as today. Move it forward when you add a newer day. Put new rows at the top of `SLEEP_LOG`, `WORKOUTS` and `DIET_LOG`.
+
+```bash
+npm run dev:health
+```
+
+Open http://localhost:5174/Grok/health/ . The dev server uses the same `/Grok/health/` base path as the published site.
+
+In Chrome on a Samsung phone, open https://sdogz17.github.io/Grok/health/ and choose **Install app** or **Add to Home screen**. The icon is labelled Health. It is a separate app from Mandarin: its own manifest, and a service worker scoped to `/Grok/health/`. The Mandarin worker ignores that path, so the two apps do not share a cache.
 
 Light and dark follow the phone’s theme.

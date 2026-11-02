@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "dev:health": "vite --config health/vite.config.ts",
+    "build": "tsc --noEmit && vite build && tsc -p health/tsconfig.json --noEmit && vite build --config health/vite.config.ts",
     "preview": "vite preview --host 127.0.0.1 --port 4173"
   },
   "dependencies": {
