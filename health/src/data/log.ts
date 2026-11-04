@@ -150,6 +150,8 @@ export const DAYS: Day[] = [
 ];
 
 export const WORKOUTS: Workout[] = [
+  {iso: "2026-11-04", date: "Wed 4 Nov", time: "21:11", sport: "weightlifting", mins: 47, strain: 11.8, avg: 127, max: 160, kcal: 301, notes: "Chest-supported rows 3 sets, cable bicep curls 3 sets, lat pulldowns 3 sets, cable rows 2 sets"},
+  {iso: "2026-11-04", date: "Wed 4 Nov", time: "20:10", sport: "walking", mins: 49, strain: 7.5, avg: 127, max: 161, kcal: 314},
   {iso: "2026-11-02", date: "Mon 2 Nov", time: "20:18", sport: "weightlifting", mins: 36, strain: 9.6, avg: 119, max: 149, kcal: 174, notes: "Chest press 3 sets, tricep pushdowns 3 sets, pull-ups 3 sets"},
   {iso: "2026-11-02", date: "Mon 2 Nov", time: "19:56", sport: "activity", mins: 22, strain: 4.3, avg: 104, max: 130, kcal: 37},
   {iso: "2026-11-02", date: "Mon 2 Nov", time: "04:04", sport: "walking", mins: 15, strain: 4.5, avg: 114, max: 124, kcal: 54},
@@ -294,7 +296,7 @@ export const ROUTINE_LOG: RoutineDay[] = [
 
 export const LIFT_GOAL = 4;
 export const LIFT_GOAL_SET = "Mon 26 Oct 2026";
-export const TODAY_ISO = "2026-11-02";
+export const TODAY_ISO = "2026-11-04";
 export const GOOD_SLEEP = 85;
 export const OK_SLEEP = 70;
 export const GOOD_RECOVERY = 67;
