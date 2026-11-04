@@ -204,4 +204,18 @@ export const DAYS: StudyDay[] = [
       { pinyin: "jiǎnféi", meaning: "lose weight, diet (neutral: jiǎn zhòng)" },
     ],
   },
+  {
+    date: "2026-11-05",
+    count: 3,
+    summary: "Talking about a deep chat with dad, then built 'Jīntiān wǎnshang wǒ (gēn) wǒ mā liáo de hěn jiǔ'.",
+    grammar: [
+      "verb + de + hěn + adjective (how it was done): liáo de hěn shēn, liáo de hěn jiǔ",
+      "gēn [person] + verb (with someone); hé is the more formal alternative",
+    ],
+    words: [
+      { pinyin: "jīntiān wǎnshang", meaning: "tonight (today evening)" },
+      { pinyin: "liáo", meaning: "chat, talk (full form: liáotiān)" },
+      { pinyin: "hěn jiǔ", meaning: "a long time" },
+    ],
+  },
 ];
