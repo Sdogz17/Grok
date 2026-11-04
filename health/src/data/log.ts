@@ -54,7 +54,9 @@ export const SLEEP_PULLED = "2 Nov 2026, 9:20 PM Melbourne time";
 
 /* Sleep log for the habit calendar (newest first). Extend from WHOOP get_sleep / get_recovery / get_cycles. */
 export const SLEEP_LOG: SleepDay[] = [
-  {iso: "2026-11-02", perf: 28, hours: 3.74, bed: "12:17", wake: "16:10", recovery: 13, hrv: 34.3, rhr: 65, strain: 10.3},
+  {iso: "2026-11-04", perf: 73, hours: 7.90, bed: "02:21", wake: "11:30", recovery: 94, hrv: 73.4, rhr: 62, strain: 13.6},
+  {iso: "2026-11-03", perf: 75, hours: 9.57, bed: "05:09", wake: "16:14", recovery: 50, hrv: 43.3, rhr: 63, strain: 5.2},
+  {iso: "2026-11-02", perf: 28, hours: 3.74, bed: "12:17", wake: "16:10", recovery: 13, hrv: 34.3, rhr: 65, strain: 12.2},
   {iso: "2026-11-01", perf: 70, hours: 5.65, bed: "05:14", wake: "10:56", recovery: 51, hrv: 48.0, rhr: 65, strain: 15.5},
   {iso: "2026-10-31", perf: 84, hours: 6.80, bed: "06:13", wake: "13:36", recovery: 46, hrv: 42.2, rhr: 63, strain: 13.8},
   {iso: "2026-10-30", perf: 88, hours: 8.20, bed: "05:41", wake: "14:18", recovery: 57, hrv: 49.2, rhr: 64, strain: 12.9},
