@@ -206,7 +206,7 @@ export const DAYS: StudyDay[] = [
   },
   {
     date: "2026-11-05",
-    count: 20,
+    count: 22,
     summary: "Talking about a deep chat with dad, then built 'Jīntiān wǎnshang wǒ (gēn) wǒ mā liáo de hěn jiǔ', 'Wǒ gēn wǒ péngyou liáo de hěn kāixīn' and 'Wǒ zài nǔlì jiǎnféi, suǒyǐ wǒ bù chī mǐfàn'.",
     grammar: [
       "verb + de + hěn + adjective (how it was done): liáo de hěn shēn, liáo de hěn jiǔ",
@@ -234,6 +234,8 @@ export const DAYS: StudyDay[] = [
       { pinyin: "bà", meaning: "dad (softer: bàba)" },
       { pinyin: "māma", meaning: "mum (short: mā)" },
       { pinyin: "yīnwèi", meaning: "because" },
+      { pinyin: "xíguàn", meaning: "habit (noun) / be used to (verb); adapting: shìyìng" },
+      { pinyin: "dànshì", meaning: "but" },
     ],
   },
 ];
