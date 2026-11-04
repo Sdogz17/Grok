@@ -190,4 +190,18 @@ export const DAYS: StudyDay[] = [
       { pinyin: "míngquè", meaning: "clear, explicit (everyday: qīngchu)" },
     ],
   },
+  {
+    date: "2026-11-04",
+    count: 1,
+    summary: "Diary-style practice about losing weight, work direction and plans. Built 'Wǒ jiǎnféi le'.",
+    grammar: [
+      "zài + verb (currently doing) vs le (change or done): wǒ zài jiǎnféi vs wǒ jiǎnféi le",
+      "verb + fǎ (way of doing): chīfǎ, zuòfǎ, shuōfǎ, xiǎngfǎ",
+      "wǒ zài nǔlì + verb (working hard at)",
+      "duì … hěn mǎnyì (satisfied with)",
+    ],
+    words: [
+      { pinyin: "jiǎnféi", meaning: "lose weight, diet (neutral: jiǎn zhòng)" },
+    ],
+  },
 ];
