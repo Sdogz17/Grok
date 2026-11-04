@@ -206,11 +206,12 @@ export const DAYS: StudyDay[] = [
   },
   {
     date: "2026-11-05",
-    count: 9,
+    count: 12,
     summary: "Talking about a deep chat with dad, then built 'Jīntiān wǎnshang wǒ (gēn) wǒ mā liáo de hěn jiǔ', 'Wǒ gēn wǒ péngyou liáo de hěn kāixīn' and 'Wǒ zài nǔlì jiǎnféi, suǒyǐ wǒ bù chī mǐfàn'.",
     grammar: [
       "verb + de + hěn + adjective (how it was done): liáo de hěn shēn, liáo de hěn jiǔ",
       "gēn [person] + verb (with someone); hé is the more formal alternative",
+      "méi (didn't / haven't yet) vs bù (habit, choice, future)",
     ],
     words: [
       { pinyin: "jīntiān wǎnshang", meaning: "tonight (today evening)" },
@@ -222,6 +223,9 @@ export const DAYS: StudyDay[] = [
       { pinyin: "nǔlì", meaning: "try hard (wǒ zài nǔlì + verb; quick try: shìshi)" },
       { pinyin: "suǒyǐ", meaning: "so, therefore" },
       { pinyin: "mǐfàn", meaning: "rice (as a meal)" },
+      { pinyin: "hái méi", meaning: "haven't yet (méi = didn't; bù = don't/won't by choice)" },
+      { pinyin: "zuò wán", meaning: "finish doing (verb + wán)" },
+      { pinyin: "míngtiān", meaning: "tomorrow" },
     ],
   },
 ];
