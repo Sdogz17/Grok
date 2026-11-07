@@ -242,4 +242,17 @@ export const DAYS: StudyDay[] = [
       { pinyin: "chénggōng", meaning: "succeed (casual: zuò dào le = I did it)" },
     ],
   },
+  {
+    date: "2026-11-07",
+    count: 2,
+    summary: "Built 'Wǒ yǒu zúgòu de shíjiān fùxí' (I have enough time to review).",
+    grammar: [
+      "yǒu + zúgòu de + noun",
+      "time + verb, no separate to",
+    ],
+    words: [
+      { pinyin: "zúgòu", meaning: "enough, sufficient (casual: gòu)" },
+      { pinyin: "fùxí", meaning: "review" },
+    ],
+  },
 ];
