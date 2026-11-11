@@ -255,4 +255,13 @@ export const DAYS: StudyDay[] = [
       { pinyin: "fùxí", meaning: "review" },
     ],
   },
+  {
+    date: "2026-11-11",
+    count: 1,
+    summary: "Used zǒngshì in 'Wǒ zǒngshì xiǎng ràng devs nǔlì gōngzuò'.",
+    grammar: ["xiǎng ràng + person + verb = want someone to do"],
+    words: [
+      { pinyin: "zǒngshì", meaning: "always (casual alt: lǎoshì, often complaining)" },
+    ],
+  },
 ];
