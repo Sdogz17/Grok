@@ -51,6 +51,16 @@ import {
 const SHIELD_MS = 600;
 const CLOSE_GUARD_MS = 800;
 const RECENT = 8;
+const MISSING = "—";
+
+function dashNumber(value: number | null, digits?: number): string {
+  if (value === null) return MISSING;
+  return digits === undefined ? String(value) : value.toFixed(digits);
+}
+
+function durationLabel(mins: number | null): string {
+  return mins === null ? MISSING : `${mins} min`;
+}
 
 const FIRST_ISO = firstLoggedIso(SLEEP_LOG, WORKOUTS);
 const MIN_MONTH = FIRST_ISO.slice(0, 7);
@@ -216,18 +226,19 @@ function DayDialog({
         {sessions.length > 0 ? (
           <>
             <div className="block-label">{sessions.length === 1 ? "1 workout" : `${sessions.length} workouts`}</div>
-            {sessions.map((session) => (
-              <div className="session" key={`${session.time}-${session.sport}-${session.mins}`}>
+            {sessions.map((session, index) => (
+              <div className="session" key={`${session.iso}-${session.sport}-${index}`}>
                 <div className="session-top">
-                  <span className="session-time">{session.time}</span>
+                  <span className="session-time">{session.time ?? MISSING}</span>
                   <span className="session-name">
                     {session.sport === "weightlifting" ? <LiftMark /> : null}
                     {sportLabel(session.sport)}
                   </span>
-                  <span className="session-mins">{session.mins} min</span>
+                  <span className="session-mins">{durationLabel(session.mins)}</span>
                 </div>
                 <p className="session-meta">
-                  Strain {session.strain.toFixed(1)}, {session.kcal} kcal, avg HR {session.avg}, max {session.max}
+                  Strain {dashNumber(session.strain, 1)}, {dashNumber(session.kcal)} kcal, avg HR {dashNumber(session.avg)}, max{" "}
+                  {dashNumber(session.max)}
                 </p>
                 {session.notes ? <p className="session-notes">{session.notes}</p> : null}
               </div>
@@ -378,7 +389,7 @@ export default function App() {
   const selectedSessions = selected
     ? WORKOUTS.filter((workout) => workout.iso === selected)
         .slice()
-        .sort((a, b) => a.time.localeCompare(b.time))
+        .sort((a, b) => (a.time ?? "").localeCompare(b.time ?? ""))
     : [];
   const selectedDiets = selected ? DIET_LOG.filter((day) => day.iso === selected) : [];
   const visibleLifts = showLifts ? lifts : lifts.slice(0, RECENT);
@@ -497,16 +508,17 @@ export default function App() {
             {lifts.length} sessions, newest first. Goal of {LIFT_GOAL} a week, set {LIFT_GOAL_SET}.
           </p>
           <div className="rows">
-            {visibleLifts.map((workout) => (
-              <article className="row" key={`${workout.iso}-${workout.time}-${workout.mins}`}>
+            {visibleLifts.map((workout, index) => (
+              <article className="row" key={`${workout.iso}-${workout.sport}-${index}`}>
                 <div className="row-top">
                   <span className="row-when">
-                    {shortDate(workout.iso)}, {workout.time}
+                    {shortDate(workout.iso)}, {workout.time ?? MISSING}
                   </span>
-                  <span className="row-mins">{workout.mins} min</span>
+                  <span className="row-mins">{durationLabel(workout.mins)}</span>
                 </div>
                 <p className="row-meta">
-                  Strain {workout.strain.toFixed(1)}, {workout.kcal} kcal, HR {workout.avg}–{workout.max}
+                  Strain {dashNumber(workout.strain, 1)}, {dashNumber(workout.kcal)} kcal, HR {dashNumber(workout.avg)}–
+                  {dashNumber(workout.max)}
                 </p>
                 {workout.notes ? <p className="session-notes">{workout.notes}</p> : null}
               </article>
@@ -540,17 +552,17 @@ export default function App() {
             }}
           />
           <div className="rows">
-            {visibleWorkouts.map((workout) => (
-              <article className="row" key={`${workout.iso}-${workout.time}-${workout.sport}-${workout.mins}`}>
+            {visibleWorkouts.map((workout, index) => (
+              <article className="row" key={`${workout.iso}-${workout.sport}-${index}`}>
                 <div className="row-top">
                   <span className="row-when">
-                    {shortDate(workout.iso)}, {workout.time}
+                    {shortDate(workout.iso)}, {workout.time ?? MISSING}
                   </span>
-                  <span className="row-mins">{workout.mins} min</span>
+                  <span className="row-mins">{durationLabel(workout.mins)}</span>
                 </div>
                 <p className="row-meta">
-                  {sportLabel(workout.sport)}, strain {workout.strain.toFixed(1)}, {workout.kcal} kcal, HR {workout.avg}–
-                  {workout.max}
+                  {sportLabel(workout.sport)}, strain {dashNumber(workout.strain, 1)}, {dashNumber(workout.kcal)} kcal, HR{" "}
+                  {dashNumber(workout.avg)}–{dashNumber(workout.max)}
                 </p>
               </article>
             ))}
