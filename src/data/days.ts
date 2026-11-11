@@ -257,11 +257,15 @@ export const DAYS: StudyDay[] = [
   },
   {
     date: "2026-11-11",
-    count: 1,
-    summary: "Used zǒngshì in 'Wǒ zǒngshì xiǎng ràng devs nǔlì gōngzuò'.",
-    grammar: ["xiǎng ràng + person + verb = want someone to do"],
+    count: 2,
+    summary: "Used zǒngshì in 'Wǒ zǒngshì xiǎng ràng devs nǔlì gōngzuò' and háishi in 'Messi zǒngshì chénggōng dànshì jīntiān wǎnshang tā háishi hěn lèi'.",
+    grammar: [
+      "xiǎng ràng + person + verb = want someone to do",
+      "háishi hěn + adjective = still (feeling), not hái hěn",
+    ],
     words: [
       { pinyin: "zǒngshì", meaning: "always (casual alt: lǎoshì, often complaining)" },
+      { pinyin: "háishi", meaning: "still (wǒ háishi hěn lèi = I'm still tired)" },
     ],
   },
 ];
