@@ -274,8 +274,8 @@ export const DAYS: StudyDay[] = [
   },
   {
     date: "2026-11-12",
-    count: 1,
-    summary: "Used cái in 'Jīntiān lǎobǎn cái kàn (xīn) guǎnggào' (the boss only saw the new ad today). Also covered zhōngyú, yòu vs zài, and time-word order.",
+    count: 2,
+    summary: "Used yòu in 'Messi yòu jìn qiú le!' (Messi scored again). Used cái in 'Jīntiān lǎobǎn cái kàn (xīn) guǎnggào' (the boss only saw the new ad today). Also covered zhōngyú, yòu vs zài, and time-word order.",
     grammar: [
       "cái goes right before the verb, no le at the end: Tā shí diǎn cái lái",
       "Point in time or place goes before the verb; duration goes after: Wǒ jīntiān zài gōngsī gōngzuò le sān ge xiǎoshí",
@@ -283,6 +283,7 @@ export const DAYS: StudyDay[] = [
     ],
     words: [
       { pinyin: "cái", meaning: "only then, not until (opposite: jiù)" },
+      { pinyin: "yòu", meaning: "again (already happened, + le; future again: zài)" },
     ],
   },
 ];
