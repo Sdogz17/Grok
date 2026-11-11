@@ -29,7 +29,7 @@ export type Day = {
   strain: number | null; kcal: number | null; steps: number | null; complete: boolean;
 };
 /* notes: optional free text for what was done (exercises, sets). Add it to any WORKOUTS entry. */
-export type Workout = { iso: string; date: string; time: string; sport: string; mins: number; strain: number; avg: number; max: number; kcal: number; notes?: string };
+export type Workout = { iso: string; date: string; time: string | null; sport: string; mins: number | null; strain: number | null; avg: number | null; max: number | null; kcal: number | null; notes?: string };
 export type DietDay = { iso: string; date: string; kcal: number; protein: number; carbs: number; fat: number; burned: number | null; items: string[] };
 export type RoutineDay = { date: string; redLight: string; exercise: string; notes: string };
 /* One row per Melbourne calendar day, keyed by the date of the wake-up from the main sleep (naps excluded).
@@ -152,6 +152,8 @@ export const DAYS: Day[] = [
 ];
 
 export const WORKOUTS: Workout[] = [
+  {iso: "2026-11-11", date: "Wed 11 Nov", time: null, sport: "weightlifting", mins: null, strain: null, avg: null, max: null, kcal: null, notes: "Chest press 3 sets, lat pulldowns 3 sets, pull-ups 3 sets, dips 3 sets, trap bar trap work 3 sets"},
+  {iso: "2026-11-08", date: "Sun 8 Nov", time: null, sport: "weightlifting", mins: null, strain: null, avg: null, max: null, kcal: null, notes: "Incline chest press 3 sets, shoulder lateral raises 3 sets, tricep pushdowns 3 sets, a second chest press 3 sets, trap bar shrugs/trap work 3 sets"},
   {iso: "2026-11-04", date: "Wed 4 Nov", time: "21:11", sport: "weightlifting", mins: 47, strain: 11.8, avg: 127, max: 160, kcal: 301, notes: "Chest-supported rows 3 sets, cable bicep curls 3 sets, lat pulldowns 3 sets, cable rows 2 sets"},
   {iso: "2026-11-04", date: "Wed 4 Nov", time: "20:10", sport: "walking", mins: 49, strain: 7.5, avg: 127, max: 161, kcal: 314},
   {iso: "2026-11-02", date: "Mon 2 Nov", time: "20:18", sport: "weightlifting", mins: 36, strain: 9.6, avg: 119, max: 149, kcal: 174, notes: "Chest press 3 sets, tricep pushdowns 3 sets, pull-ups 3 sets"},
@@ -298,7 +300,7 @@ export const ROUTINE_LOG: RoutineDay[] = [
 
 export const LIFT_GOAL = 4;
 export const LIFT_GOAL_SET = "Mon 26 Oct 2026";
-export const TODAY_ISO = "2026-11-04";
+export const TODAY_ISO = "2026-11-12";
 export const GOOD_SLEEP = 85;
 export const OK_SLEEP = 70;
 export const GOOD_RECOVERY = 67;
