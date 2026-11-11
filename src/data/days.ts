@@ -257,8 +257,8 @@ export const DAYS: StudyDay[] = [
   },
   {
     date: "2026-11-11",
-    count: 2,
-    summary: "Used zǒngshì in 'Wǒ zǒngshì xiǎng ràng devs nǔlì gōngzuò' and háishi in 'Messi zǒngshì chénggōng dànshì jīntiān wǎnshang tā háishi hěn lèi'.",
+    count: 3,
+    summary: "Used zǒngshì in 'Wǒ zǒngshì xiǎng ràng devs nǔlì gōngzuò', háishi in 'Messi zǒngshì chénggōng dànshì jīntiān wǎnshang tā háishi hěn lèi', and lǎobǎn in 'Wǒ bù xǐhuan yǒu (yí ge) lǎobǎn'. Note: zǒngshì often sounds like a complaint; use yìzhí for positive 'always'.",
     grammar: [
       "xiǎng ràng + person + verb = want someone to do",
       "háishi hěn + adjective = still (feeling), not hái hěn",
@@ -266,6 +266,7 @@ export const DAYS: StudyDay[] = [
     words: [
       { pinyin: "zǒngshì", meaning: "always (casual alt: lǎoshì, often complaining)" },
       { pinyin: "háishi", meaning: "still (wǒ háishi hěn lèi = I'm still tired)" },
+      { pinyin: "lǎobǎn", meaning: "boss (dāng lǎobǎn = be the boss; dǎgōng = work for someone)" },
     ],
   },
 ];
