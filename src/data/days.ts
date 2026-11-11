@@ -272,4 +272,17 @@ export const DAYS: StudyDay[] = [
       { pinyin: "guǎnggào", meaning: "ad, advertisement (xīn guǎnggào = new ad)" },
     ],
   },
+  {
+    date: "2026-11-12",
+    count: 1,
+    summary: "Used cái in 'Jīntiān lǎobǎn cái kàn (xīn) guǎnggào' (the boss only saw the new ad today). Also covered zhōngyú, yòu vs zài, and time-word order.",
+    grammar: [
+      "cái goes right before the verb, no le at the end: Tā shí diǎn cái lái",
+      "Point in time or place goes before the verb; duration goes after: Wǒ jīntiān zài gōngsī gōngzuò le sān ge xiǎoshí",
+      "yòu = again (already happened, often + le, can sound annoyed) vs zài = again (future)",
+    ],
+    words: [
+      { pinyin: "cái", meaning: "only then, not until (opposite: jiù)" },
+    ],
+  },
 ];
