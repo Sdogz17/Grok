@@ -288,8 +288,8 @@ export const DAYS: StudyDay[] = [
   },
   {
     date: "2026-11-13",
-    count: 6,
-    summary: "Business practice: 'Rúguǒ lǎobǎn bù mǎnyì de huà, wǒ jiù zài zuò yí cì', 'Duì wǒ lái shuō, gěi kèhù zuò guǎnggào zuì zhòngyào', 'Wǒ yìzhí hěn zàihu zhège kèhù', 'Zhège jìhuà hěn hǎo, érqiě kèhù yě hěn xǐhuan'. Also covered duì vs direct verbs, duì… lái shuō vs gěi, jìhuà vs zhànlüè, zhǔnbèi, píngjǐng, guānjiàn.",
+    count: 10,
+    summary: "Business practice: 'Rúguǒ lǎobǎn bù mǎnyì de huà, wǒ jiù zài zuò yí cì', 'Duì wǒ lái shuō, gěi kèhù zuò guǎnggào zuì zhòngyào', 'Wǒ yìzhí hěn zàihu zhège kèhù', 'Zhège jìhuà hěn hǎo, érqiě kèhù yě hěn xǐhuan', 'Wǒ zài zhǔnbèi jìhuà, érqiě lǎobǎn yě hěn mǎnyì', 'Duì wǒmen gōngsī lái shuō, xiànzài de píngjǐng shì wǒmen de kāifā sùdù'. Hit the daily goal of 10. Also covered duì vs direct verbs, duì… lái shuō vs gěi, jìhuà vs zhànlüè, zhǔnbèi, píngjǐng, guānjiàn.",
     grammar: [
       "Rúguǒ … de huà, (nà) … jiù …: if … then …",
       "duì X lái shuō opens a sentence for a viewpoint; gěi X before the verb when X receives something",
@@ -303,6 +303,10 @@ export const DAYS: StudyDay[] = [
       { pinyin: "érqiě", meaning: "and also (joins clauses)" },
       { pinyin: "jiù", meaning: "then, just (nà … jiù …)" },
       { pinyin: "de huà", meaning: "if (rúguǒ … de huà)" },
+      { pinyin: "zhǔnbèi", meaning: "prepare (zhǔn = ready, bèi = equip)" },
+      { pinyin: "píngjǐng", meaning: "bottleneck (píng = bottle, jǐng = neck)" },
+      { pinyin: "kāifā", meaning: "develop, development" },
+      { pinyin: "sùdù", meaning: "speed" },
     ],
   },
 ];
