@@ -286,4 +286,23 @@ export const DAYS: StudyDay[] = [
       { pinyin: "yòu", meaning: "again (already happened, + le; future again: zài)" },
     ],
   },
+  {
+    date: "2026-11-13",
+    count: 6,
+    summary: "Business practice: 'Rúguǒ lǎobǎn bù mǎnyì de huà, wǒ jiù zài zuò yí cì', 'Duì wǒ lái shuō, gěi kèhù zuò guǎnggào zuì zhòngyào', 'Wǒ yìzhí hěn zàihu zhège kèhù', 'Zhège jìhuà hěn hǎo, érqiě kèhù yě hěn xǐhuan'. Also covered duì vs direct verbs, duì… lái shuō vs gěi, jìhuà vs zhànlüè, zhǔnbèi, píngjǐng, guānjiàn.",
+    grammar: [
+      "Rúguǒ … de huà, (nà) … jiù …: if … then …",
+      "duì X lái shuō opens a sentence for a viewpoint; gěi X before the verb when X receives something",
+      "Action/feeling verbs (zàihu, xǐhuan, fùzé) take the object directly; adjectives (mǎnyì, zhòngyào) need duì",
+      "hé joins nouns only; érqiě / yě join clauses (yě goes before the verb)",
+    ],
+    words: [
+      { pinyin: "zàihu", meaning: "care about (zài = at, hu = particle)" },
+      { pinyin: "yìzhí", meaning: "always, all along (positive)" },
+      { pinyin: "kèhù", meaning: "client" },
+      { pinyin: "érqiě", meaning: "and also (joins clauses)" },
+      { pinyin: "jiù", meaning: "then, just (nà … jiù …)" },
+      { pinyin: "de huà", meaning: "if (rúguǒ … de huà)" },
+    ],
+  },
 ];
