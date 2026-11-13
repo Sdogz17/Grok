@@ -288,8 +288,8 @@ export const DAYS: StudyDay[] = [
   },
   {
     date: "2026-11-13",
-    count: 37,
-    summary: "Business practice: 'Rúguǒ lǎobǎn bù mǎnyì de huà, wǒ jiù zài zuò yí cì', 'Duì wǒ lái shuō, gěi kèhù zuò guǎnggào zuì zhòngyào', 'Wǒ yìzhí hěn zàihu zhège kèhù', 'Zhège jìhuà hěn hǎo, érqiě kèhù yě hěn xǐhuan', 'Wǒ zài zhǔnbèi jìhuà, érqiě lǎobǎn yě hěn mǎnyì', 'Duì wǒmen gōngsī lái shuō, xiànzài de píngjǐng shì wǒmen de kāifā sùdù'. Later: 'Yǐqián wǒ juéde sùdù zuì zhòngyào, dànshì xiànzài wǒ juéde zhànlüè gèng zhòngyào', 'Kāi huì yǐhòu, wǒ xiǎng tǎolùn kèhù de yāoqiú', 'Gōngkāi chūguǐ tài shǎ le', 'Wǒ juéde wǒmen yīnggāi měi ge xīngqī kāi huì'. Then: 'Shàng cì lǎobǎn bù xǐhuan wǒ zhǔnbèi de guǎnggào', 'Wǒ bǎ zhànlüè zhǔnbèi wán le', 'Shì bu shì wǒmen de guǎnggào gēn tāmen de chàbuduō', 'Gēnjù shàng ge yuè de shùjù, wǒmen de kèhù gèng zàihu sùdù', 'Gēn wǒmen de duìshǒu bǐ qǐlái, wǒmen de kèhù gèng zàihu jiéguǒ'. 37 words, almost quadruple the daily goal. Also covered duì vs direct verbs, duì… lái shuō vs gěi, jìhuà vs zhànlüè, zhǔnbèi, píngjǐng, guānjiàn.",
+    count: 38,
+    summary: "Business practice: 'Rúguǒ lǎobǎn bù mǎnyì de huà, wǒ jiù zài zuò yí cì', 'Duì wǒ lái shuō, gěi kèhù zuò guǎnggào zuì zhòngyào', 'Wǒ yìzhí hěn zàihu zhège kèhù', 'Zhège jìhuà hěn hǎo, érqiě kèhù yě hěn xǐhuan', 'Wǒ zài zhǔnbèi jìhuà, érqiě lǎobǎn yě hěn mǎnyì', 'Duì wǒmen gōngsī lái shuō, xiànzài de píngjǐng shì wǒmen de kāifā sùdù'. Later: 'Yǐqián wǒ juéde sùdù zuì zhòngyào, dànshì xiànzài wǒ juéde zhànlüè gèng zhòngyào', 'Kāi huì yǐhòu, wǒ xiǎng tǎolùn kèhù de yāoqiú', 'Gōngkāi chūguǐ tài shǎ le', 'Wǒ juéde wǒmen yīnggāi měi ge xīngqī kāi huì'. Then: 'Shàng cì lǎobǎn bù xǐhuan wǒ zhǔnbèi de guǎnggào', 'Wǒ bǎ zhànlüè zhǔnbèi wán le', 'Shì bu shì wǒmen de guǎnggào gēn tāmen de chàbuduō', 'Gēnjù shàng ge yuè de shùjù, wǒmen de kèhù gèng zàihu sùdù', 'Gēn wǒmen de duìshǒu bǐ qǐlái, wǒmen de kèhù gèng zàihu jiéguǒ'. Also 'Wǒmen gōngsī de píngjǐng shì kāifā sùdù, suǒyǐ wǒmen xūyào tígāo sùdù'. 38 words, almost quadruple the daily goal. Also covered duì vs direct verbs, duì… lái shuō vs gěi, jìhuà vs zhànlüè, zhǔnbèi, píngjǐng, guānjiàn.",
     grammar: [
       "Rúguǒ … de huà, (nà) … jiù …: if … then …",
       "duì X lái shuō opens a sentence for a viewpoint; gěi X before the verb when X receives something",
@@ -334,6 +334,7 @@ export const DAYS: StudyDay[] = [
       { pinyin: "gēn … bǐ qǐlái", meaning: "compared with …" },
       { pinyin: "duìshǒu", meaning: "competitor, rival" },
       { pinyin: "zhāo", meaning: "to recruit, to hire" },
+      { pinyin: "tígāo", meaning: "to raise, to improve; tí = lift, gāo = high" },
     ],
   },
 ];
