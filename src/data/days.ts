@@ -288,8 +288,8 @@ export const DAYS: StudyDay[] = [
   },
   {
     date: "2026-11-13",
-    count: 10,
-    summary: "Business practice: 'Rúguǒ lǎobǎn bù mǎnyì de huà, wǒ jiù zài zuò yí cì', 'Duì wǒ lái shuō, gěi kèhù zuò guǎnggào zuì zhòngyào', 'Wǒ yìzhí hěn zàihu zhège kèhù', 'Zhège jìhuà hěn hǎo, érqiě kèhù yě hěn xǐhuan', 'Wǒ zài zhǔnbèi jìhuà, érqiě lǎobǎn yě hěn mǎnyì', 'Duì wǒmen gōngsī lái shuō, xiànzài de píngjǐng shì wǒmen de kāifā sùdù'. Hit the daily goal of 10. Also covered duì vs direct verbs, duì… lái shuō vs gěi, jìhuà vs zhànlüè, zhǔnbèi, píngjǐng, guānjiàn.",
+    count: 20,
+    summary: "Business practice: 'Rúguǒ lǎobǎn bù mǎnyì de huà, wǒ jiù zài zuò yí cì', 'Duì wǒ lái shuō, gěi kèhù zuò guǎnggào zuì zhòngyào', 'Wǒ yìzhí hěn zàihu zhège kèhù', 'Zhège jìhuà hěn hǎo, érqiě kèhù yě hěn xǐhuan', 'Wǒ zài zhǔnbèi jìhuà, érqiě lǎobǎn yě hěn mǎnyì', 'Duì wǒmen gōngsī lái shuō, xiànzài de píngjǐng shì wǒmen de kāifā sùdù'. Later: 'Yǐqián wǒ juéde sùdù zuì zhòngyào, dànshì xiànzài wǒ juéde zhànlüè gèng zhòngyào', 'Kāi huì yǐhòu, wǒ xiǎng tǎolùn kèhù de yāoqiú', 'Gōngkāi chūguǐ tài shǎ le', 'Wǒ juéde wǒmen yīnggāi měi ge xīngqī kāi huì'. Doubled the daily goal with 20. Also covered duì vs direct verbs, duì… lái shuō vs gěi, jìhuà vs zhànlüè, zhǔnbèi, píngjǐng, guānjiàn.",
     grammar: [
       "Rúguǒ … de huà, (nà) … jiù …: if … then …",
       "duì X lái shuō opens a sentence for a viewpoint; gěi X before the verb when X receives something",
@@ -307,6 +307,16 @@ export const DAYS: StudyDay[] = [
       { pinyin: "píngjǐng", meaning: "bottleneck (píng = bottle, jǐng = neck)" },
       { pinyin: "kāifā", meaning: "develop, development" },
       { pinyin: "sùdù", meaning: "speed" },
+      { pinyin: "kāi huì", meaning: "have a meeting" },
+      { pinyin: "měi ge xīngqī", meaning: "every week" },
+      { pinyin: "zhànlüè", meaning: "strategy (zhàn = battle, lüè = plan)" },
+      { pinyin: "yāoqiú", meaning: "requirement, to require" },
+      { pinyin: "tǎolùn", meaning: "discuss (takes topic directly)" },
+      { pinyin: "yǐhòu", meaning: "after; in the future (X yǐhòu = after X)" },
+      { pinyin: "gèng", meaning: "even more (before adjective)" },
+      { pinyin: "gōngkāi", meaning: "publicly, openly" },
+      { pinyin: "chūguǐ", meaning: "cheat on a partner (negative)" },
+      { pinyin: "shǎ", meaning: "dumb, silly (casual)" },
     ],
   },
 ];
