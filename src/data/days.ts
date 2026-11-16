@@ -361,17 +361,39 @@ export const DAYS: StudyDay[] = [
   },
   {
     date: "2026-11-15",
-    count: 4,
-    summary: "Mined 30 words from the Oct 15 product meeting plus general verbs and nouns, learning them one by one with spaced-repetition examples. Used yuángōng in 'Yuánlái wǒmen duìshǒu de yuángōng yǒu gèng duō jīngyàn', jùjué in 'Zuìjìn lǎobǎn jùjué le wǒ de yíngxiāo jìhuà', and chūchāi plus fù qián in 'Wǒmen chūchāi de shíhou, lǎobǎn yìzhí fù qián'.",
+    count: 8,
+    summary: "Mined 30 words from the Oct 15 product meeting plus general verbs and nouns, learning them one by one with spaced-repetition examples. Used yuángōng in 'Yuánlái wǒmen duìshǒu de yuángōng yǒu gèng duō jīngyàn', jùjué in 'Zuìjìn lǎobǎn jùjué le wǒ de yíngxiāo jìhuà', and chūchāi plus fù qián in 'Wǒmen chūchāi de shíhou, lǎobǎn yìzhí fù qián'. Used gǎibiàn, then jiějué and bànfǎ in 'Nǐ zhǎodào jiějué zhège wèntí de bànfǎ', and tuījiàn in 'Wǒ xīwàng nǐ kěyǐ tuījiàn hěn hǎo zhuànqián de bànfǎ' and 'Gēnjù shùjù, wǒ tuījiàn wǒmen líkāi zhège shìchǎng'.",
     grammar: [
       "yuánlái = turns out (start of sentence or after subject); also 'originally'",
       "jùjué + object directly, no duì",
+      "verb + object + de bànfǎ",
+      "jiějué is a verb and also a noun in jiějué bànfǎ",
+      "gěi + person + tuījiàn + thing",
+      "le goes after the verb: tuījiàn le",
     ],
     words: [
       { pinyin: "yuángōng", meaning: "employee (yuán = member, gōng = work)", example: { pinyin: "Duìshǒu de yuángōng yǒu gèng duō jīngyàn.", english: "The competitor's employees have more experience." } },
       { pinyin: "jùjué", meaning: "reject, refuse (+ object directly)", example: { pinyin: "Lǎobǎn jùjué le wǒ de jìhuà.", english: "The boss rejected my plan." } },
       { pinyin: "chūchāi", meaning: "business trip (lǚyóu = vacation)", example: { pinyin: "Wǒmen xià ge yuè chūchāi.", english: "We have a business trip next month." } },
       { pinyin: "fù qián", meaning: "pay (mǎidān = pick up the bill)", example: { pinyin: "Chūchāi de shíhou lǎobǎn fù qián.", english: "The boss pays when we travel for work." } },
+      { pinyin: "gǎibiàn", meaning: "to change (gǎi = change, biàn = change)", example: { pinyin: "Zhège jiéguǒ bù hǎo, suǒyǐ wǒmen yào gǎibiàn bànfǎ.", english: "This result is not good, so we need to change the method." } },
+      { pinyin: "jiějué", meaning: "to solve (also a noun in jiějué bànfǎ)", example: { pinyin: "Nǐ zhǎodào jiějué zhège wèntí de bànfǎ.", english: "You found a way to solve this problem." } },
+      { pinyin: "bànfǎ", meaning: "way, method (verb + object + de bànfǎ)", example: { pinyin: "Wǒ xīwàng nǐ kěyǐ tuījiàn hěn hǎo zhuànqián de bànfǎ.", english: "I hope you can recommend a really good way to make money." } },
+      { pinyin: "tuījiàn", meaning: "to recommend (gěi + person + tuījiàn + thing)", example: { pinyin: "Gēnjù shùjù, wǒ tuījiàn wǒmen líkāi zhège shìchǎng.", english: "Based on the data, I recommend we leave this market." } },
+    ],
+  },
+  {
+    date: "2026-11-16",
+    count: 1,
+    summary: "Used dǎsuàn in 'Jīntiān wǎnshang wǒ dǎsuàn fùxí wǒ wàng le de cí' and 'Xià ge xīngqī wǒ dǎsuàn zài kàn yíxià shùjù'.",
+    grammar: [
+      "subject + dǎsuàn + verb",
+      "bù dǎsuàn = don't plan to",
+      "xià ge xīngqī, with ge",
+      "fùxí is for study review, for data say kàn yíxià",
+    ],
+    words: [
+      { pinyin: "dǎsuàn", meaning: "to plan to, intend to (dǎ = do, suàn = calculate)", example: { pinyin: "Jīntiān wǎnshang wǒ dǎsuàn fùxí wǒ wàng le de cí.", english: "Tonight I plan to review the words I forgot." } },
     ],
   },
 ];
