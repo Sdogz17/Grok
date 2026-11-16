@@ -1,4 +1,977 @@
 {
-  "words": {},
-  "updated_at": "1970-01-01T00:00:00.000Z"
+  "updated_at": "2026-11-16T04:41:33.934Z",
+  "words": {
+    "zàihu": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:55:20.522Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:55:20.522Z"
+        }
+      ],
+      "meaning": "care about (zài = at, hu = particle)",
+      "learned_date": "2026-11-13"
+    },
+    "yìzhí": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:55:21.677Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:55:21.677Z"
+        }
+      ],
+      "meaning": "always, all along (positive)",
+      "learned_date": "2026-11-13"
+    },
+    "kèhù": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:55:23.096Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:55:23.096Z"
+        }
+      ],
+      "meaning": "client",
+      "learned_date": "2026-11-13"
+    },
+    "érqiě": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:55:24.033Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:55:24.033Z"
+        }
+      ],
+      "meaning": "and also (joins clauses)",
+      "learned_date": "2026-11-13"
+    },
+    "jiù": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:55:25.842Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:55:25.842Z"
+        }
+      ],
+      "meaning": "then, just (nà … jiù …)",
+      "learned_date": "2026-11-13"
+    },
+    "de huà": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:55:28.916Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:55:28.916Z"
+        }
+      ],
+      "meaning": "if (rúguǒ … de huà)",
+      "learned_date": "2026-11-13"
+    },
+    "zhǔnbèi": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:55:30.663Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:55:30.663Z"
+        }
+      ],
+      "meaning": "prepare (zhǔn = ready, bèi = equip)",
+      "learned_date": "2026-11-13"
+    },
+    "píngjǐng": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:55:32.023Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:55:32.023Z"
+        }
+      ],
+      "meaning": "bottleneck (píng = bottle, jǐng = neck)",
+      "learned_date": "2026-11-13"
+    },
+    "kāifā": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:55:33.527Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:55:33.527Z"
+        }
+      ],
+      "meaning": "develop, development",
+      "learned_date": "2026-11-13"
+    },
+    "sùdù": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:55:34.520Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:55:34.520Z"
+        }
+      ],
+      "meaning": "speed",
+      "learned_date": "2026-11-13"
+    },
+    "kāi huì": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:55:36.341Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:55:36.341Z"
+        }
+      ],
+      "meaning": "have a meeting",
+      "learned_date": "2026-11-13"
+    },
+    "měi ge xīngqī": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:55:39.696Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:55:39.696Z"
+        }
+      ],
+      "meaning": "every week",
+      "learned_date": "2026-11-13"
+    },
+    "zhànlüè": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:55:42.986Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:55:42.986Z"
+        }
+      ],
+      "meaning": "strategy (zhàn = battle, lüè = plan)",
+      "learned_date": "2026-11-13"
+    },
+    "yāoqiú": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:55:45.537Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:55:45.537Z"
+        }
+      ],
+      "meaning": "requirement, to require",
+      "learned_date": "2026-11-13"
+    },
+    "tǎolùn": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:55:46.725Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:55:46.725Z"
+        }
+      ],
+      "meaning": "discuss (takes topic directly)",
+      "learned_date": "2026-11-13"
+    },
+    "yǐhòu": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:55:47.935Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:55:47.935Z"
+        }
+      ],
+      "meaning": "after; in the future (X yǐhòu = after X)",
+      "learned_date": "2026-11-13"
+    },
+    "gèng": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:55:49.942Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:55:49.942Z"
+        }
+      ],
+      "meaning": "even more (before adjective)",
+      "learned_date": "2026-11-13"
+    },
+    "gōngkāi": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:55:57.449Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:55:57.449Z"
+        }
+      ],
+      "meaning": "publicly, openly",
+      "learned_date": "2026-11-13"
+    },
+    "chūguǐ": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:55:59.433Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:55:59.433Z"
+        }
+      ],
+      "meaning": "cheat on a partner (negative)",
+      "learned_date": "2026-11-13"
+    },
+    "shǎ": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:56:01.735Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:56:01.735Z"
+        }
+      ],
+      "meaning": "dumb, silly (casual)",
+      "learned_date": "2026-11-13"
+    },
+    "jiéguǒ": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:56:05.246Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:56:05.246Z"
+        }
+      ],
+      "meaning": "result, outcome",
+      "learned_date": "2026-11-13"
+    },
+    "xià cì": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:56:07.995Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:56:07.995Z"
+        }
+      ],
+      "meaning": "next time",
+      "learned_date": "2026-11-13"
+    },
+    "shàng cì": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:56:08.389Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:56:08.389Z"
+        }
+      ],
+      "meaning": "last time",
+      "learned_date": "2026-11-13"
+    },
+    "shàng ge xīngqī": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:56:10.832Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:56:10.832Z"
+        }
+      ],
+      "meaning": "last week",
+      "learned_date": "2026-11-13"
+    },
+    "shàng ge yuè": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:56:11.267Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:56:11.267Z"
+        }
+      ],
+      "meaning": "last month",
+      "learned_date": "2026-11-13"
+    },
+    "bǎ": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:56:13.055Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:56:13.055Z"
+        }
+      ],
+      "meaning": "takes a specific object before the verb + result, bǎ X zuò wán",
+      "learned_date": "2026-11-13"
+    },
+    "(rúguǒ…) huì zěnmeyàng": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:56:13.541Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:56:13.541Z"
+        }
+      ],
+      "meaning": "what would happen if…",
+      "learned_date": "2026-11-13"
+    },
+    "shì bu shì": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:56:14.442Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:56:14.442Z"
+        }
+      ],
+      "meaning": "is it the case that…? no ma",
+      "learned_date": "2026-11-13"
+    },
+    "chàbuduō": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:56:15.575Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:56:15.575Z"
+        }
+      ],
+      "meaning": "about the same",
+      "learned_date": "2026-11-13"
+    },
+    "xiān tíng xià": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:56:16.504Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:56:16.504Z"
+        }
+      ],
+      "meaning": "pause first, stop for now",
+      "learned_date": "2026-11-13"
+    },
+    "huì bu huì": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:56:17.368Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:56:17.368Z"
+        }
+      ],
+      "meaning": "will it / would it…?",
+      "learned_date": "2026-11-13"
+    },
+    "xīwàng": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:56:19.391Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:56:19.391Z"
+        }
+      ],
+      "meaning": "to hope",
+      "learned_date": "2026-11-13"
+    },
+    "gēnjù": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:56:20.095Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:56:20.095Z"
+        }
+      ],
+      "meaning": "according to, based on",
+      "learned_date": "2026-11-13"
+    },
+    "shùjù": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:56:21.058Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:56:21.058Z"
+        }
+      ],
+      "meaning": "data",
+      "learned_date": "2026-11-13"
+    },
+    "gēn … bǐ qǐlái": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:56:22.559Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:56:22.559Z"
+        }
+      ],
+      "meaning": "compared with …",
+      "learned_date": "2026-11-13"
+    },
+    "duìshǒu": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:56:25.523Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:56:25.523Z"
+        }
+      ],
+      "meaning": "competitor, rival",
+      "learned_date": "2026-11-13"
+    },
+    "zhāo": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:56:26.834Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:56:26.834Z"
+        }
+      ],
+      "meaning": "to recruit, to hire",
+      "learned_date": "2026-11-13"
+    },
+    "tígāo": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:56:28.564Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:56:28.564Z"
+        }
+      ],
+      "meaning": "to raise, to improve; tí = lift, gāo = high",
+      "learned_date": "2026-11-13"
+    },
+    "qián": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:56:30.986Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:56:30.986Z"
+        }
+      ],
+      "meaning": "before, in front",
+      "learned_date": "2026-10-13"
+    },
+    "rénmài": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:56:32.057Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:56:32.057Z"
+        }
+      ],
+      "meaning": "network, connections (rén = people, mài = vein)",
+      "learned_date": "2026-11-13"
+    },
+    "líkāi": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:56:32.924Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:56:32.924Z"
+        }
+      ],
+      "meaning": "to leave (+ place directly)",
+      "learned_date": "2026-11-13"
+    },
+    "cái": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:56:42.783Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:56:42.783Z"
+        }
+      ],
+      "meaning": "only then, not until (opposite: jiù)",
+      "learned_date": "2026-11-12"
+    },
+    "yòu": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:56:43.565Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:56:43.565Z"
+        }
+      ],
+      "meaning": "again (already happened, + le; future again: zài)",
+      "learned_date": "2026-11-12"
+    },
+    "háishi": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:56:50.336Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:56:50.336Z"
+        }
+      ],
+      "meaning": "still (wǒ háishi hěn lèi = I'm still tired)",
+      "learned_date": "2026-11-11"
+    },
+    "lǎobǎn": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:56:51.774Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:56:51.774Z"
+        }
+      ],
+      "meaning": "boss (dāng lǎobǎn = be the boss; dǎgōng = work for someone)",
+      "learned_date": "2026-11-11"
+    },
+    "zǒngshì": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:56:58.784Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:56:58.784Z"
+        }
+      ],
+      "meaning": "always (casual alt: lǎoshì, often complaining)",
+      "learned_date": "2026-11-11"
+    },
+    "guǎnggào": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:57:03.851Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:57:03.851Z"
+        }
+      ],
+      "meaning": "ad, advertisement (xīn guǎnggào = new ad)",
+      "learned_date": "2026-11-11"
+    },
+    "gěi": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:57:05.306Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:57:05.306Z"
+        }
+      ],
+      "meaning": "give / for someone (gěi + person + verb), to (gěi nǐ dǎ diànhuà), show (gěi wǒ kàn kan)",
+      "learned_date": "2026-11-11"
+    },
+    "zúgòu": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:57:15.295Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:57:15.295Z"
+        }
+      ],
+      "meaning": "enough, sufficient (casual: gòu)",
+      "learned_date": "2026-11-07"
+    },
+    "fùxí": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:57:15.713Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:57:15.713Z"
+        }
+      ],
+      "meaning": "review",
+      "learned_date": "2026-11-07"
+    },
+    "jīntiān wǎnshang": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:57:19.837Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:57:19.837Z"
+        }
+      ],
+      "meaning": "tonight (today evening)",
+      "learned_date": "2026-11-05"
+    },
+    "liáo": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:57:21.766Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:57:21.766Z"
+        }
+      ],
+      "meaning": "chat, talk (full form: liáotiān)",
+      "learned_date": "2026-11-05"
+    },
+    "hěn jiǔ": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:57:23.855Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:57:23.855Z"
+        }
+      ],
+      "meaning": "a long time",
+      "learned_date": "2026-11-05"
+    },
+    "gēn": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:57:24.733Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:57:24.733Z"
+        }
+      ],
+      "meaning": "with",
+      "learned_date": "2026-10-14"
+    },
+    "péngyou": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:57:25.711Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:57:25.711Z"
+        }
+      ],
+      "meaning": "friend",
+      "learned_date": "2026-11-05"
+    },
+    "kāixīn": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:57:26.610Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:57:26.610Z"
+        }
+      ],
+      "meaning": "happy",
+      "learned_date": "2026-10-13"
+    },
+    "nǔlì": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:57:28.875Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:57:28.875Z"
+        }
+      ],
+      "meaning": "try hard (wǒ zài nǔlì + verb; quick try: shìshi)",
+      "learned_date": "2026-11-05"
+    },
+    "suǒyǐ": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:57:30.158Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:57:30.158Z"
+        }
+      ],
+      "meaning": "so, therefore",
+      "learned_date": "2026-11-05"
+    },
+    "mǐfàn": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:57:31.862Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:57:31.862Z"
+        }
+      ],
+      "meaning": "rice (as a meal)",
+      "learned_date": "2026-11-05"
+    },
+    "hái méi": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:57:33.743Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:57:33.743Z"
+        }
+      ],
+      "meaning": "haven't yet (méi = didn't; bù = don't/won't by choice)",
+      "learned_date": "2026-11-05"
+    },
+    "zuò wán": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:57:37.078Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:57:37.078Z"
+        }
+      ],
+      "meaning": "finish doing (verb + wán)",
+      "learned_date": "2026-11-05"
+    },
+    "míngtiān": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:57:37.633Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:57:37.633Z"
+        }
+      ],
+      "meaning": "tomorrow",
+      "learned_date": "2026-11-05"
+    },
+    "tīngdǒng": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:57:40.143Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:57:40.143Z"
+        }
+      ],
+      "meaning": "understand by listening, catch (wǒ méi tīngdǒng = I didn't catch that)",
+      "learned_date": "2026-11-05"
+    },
+    "bǎo": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:57:41.750Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:57:41.750Z"
+        }
+      ],
+      "meaning": "full (wǒ bǎo le = I'm full; can't eat more: chī bú xià)",
+      "learned_date": "2026-11-05"
+    },
+    "zài": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:57:42.512Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:57:42.512Z"
+        }
+      ],
+      "meaning": "again, more (before the verb: zài chī, zài shuō)",
+      "learned_date": "2026-11-05"
+    },
+    "gàosu": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:57:44.703Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:57:44.703Z"
+        }
+      ],
+      "meaning": "tell",
+      "learned_date": "2026-11-05"
+    },
+    "xiǎng xiang": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:57:45.002Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:57:45.002Z"
+        }
+      ],
+      "meaning": "think it over (wǒ zài xiǎng xiang = let me think more)",
+      "learned_date": "2026-11-05"
+    },
+    "bà": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:57:46.068Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:57:46.068Z"
+        }
+      ],
+      "meaning": "dad (softer: bàba)",
+      "learned_date": "2026-11-05"
+    },
+    "māma": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:57:46.953Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:57:46.953Z"
+        }
+      ],
+      "meaning": "mum (short: mā)",
+      "learned_date": "2026-11-05"
+    },
+    "yīnwèi": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:57:47.524Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:57:47.524Z"
+        }
+      ],
+      "meaning": "because",
+      "learned_date": "2026-11-05"
+    },
+    "xíguàn": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:57:49.583Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:57:49.583Z"
+        }
+      ],
+      "meaning": "habit (noun) / be used to (verb); adapting: shìyìng",
+      "learned_date": "2026-11-05"
+    },
+    "dànshì": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:57:50.563Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:57:50.563Z"
+        }
+      ],
+      "meaning": "but",
+      "learned_date": "2026-11-05"
+    },
+    "zǎo qǐ": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:57:54.158Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:57:54.158Z"
+        }
+      ],
+      "meaning": "get up early (yí ge hǎo xíguàn = a good habit)",
+      "learned_date": "2026-11-05"
+    },
+    "jiānchí": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:57:56.060Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:57:56.060Z"
+        }
+      ],
+      "meaning": "keep at it, persist (jiān = firm + chí = hold)",
+      "learned_date": "2026-11-05"
+    },
+    "zhōngyú": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:57:58.283Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:57:58.283Z"
+        }
+      ],
+      "meaning": "finally, at last",
+      "learned_date": "2026-11-05"
+    },
+    "chénggōng": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:57:58.762Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:57:58.762Z"
+        }
+      ],
+      "meaning": "success",
+      "learned_date": "2026-10-13"
+    },
+    "jiǎnféi": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:58:03.159Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:58:03.159Z"
+        }
+      ],
+      "meaning": "lose weight, diet (neutral: jiǎn zhòng)",
+      "learned_date": "2026-11-04"
+    },
+    "zhǎnshì": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:58:07.237Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:58:07.237Z"
+        }
+      ],
+      "meaning": "showcase, display (casual: gěi nǐ kàn)",
+      "learned_date": "2026-11-02"
+    },
+    "zhǔyi": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:58:08.522Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:58:08.522Z"
+        }
+      ],
+      "meaning": "idea",
+      "learned_date": "2026-11-02"
+    },
+    "jìhuà": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T03:58:11.200Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T03:58:11.200Z"
+        }
+      ],
+      "meaning": "plan (vs zhǔyi, a quick idea)",
+      "learned_date": "2026-11-02"
+    },
+    "míngquè": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T03:58:12.258Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T03:58:12.258Z"
+        }
+      ],
+      "meaning": "clear, explicit (everyday: qīngchu)",
+      "learned_date": "2026-11-02"
+    }
+  }
 }
