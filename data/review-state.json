@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16T04:58:52.837Z",
+  "updated_at": "2026-11-16T05:00:20.699Z",
   "words": {
     "zàihu": {
       "latest": "forgot",
@@ -1464,6 +1464,390 @@
       ],
       "meaning": "be in charge of",
       "learned_date": "2026-10-13"
+    },
+    "guǎn": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T04:59:06.628Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T04:59:06.628Z"
+        }
+      ],
+      "meaning": "manage (casual)",
+      "learned_date": "2026-10-13"
+    },
+    "tóngyì": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T04:59:10.315Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T04:59:10.315Z"
+        }
+      ],
+      "meaning": "agree",
+      "learned_date": "2026-10-13"
+    },
+    "xìngqù": {
+      "latest": "half remembered",
+      "latest_at": "2026-11-16T04:59:11.114Z",
+      "history": [
+        {
+          "result": "half remembered",
+          "at": "2026-11-16T04:59:11.114Z"
+        }
+      ],
+      "meaning": "interest",
+      "learned_date": "2026-10-13"
+    },
+    "yǐqián": {
+      "latest": "half remembered",
+      "latest_at": "2026-11-16T04:59:14.354Z",
+      "history": [
+        {
+          "result": "half remembered",
+          "at": "2026-11-16T04:59:14.354Z"
+        }
+      ],
+      "meaning": "before (in time)",
+      "learned_date": "2026-10-13"
+    },
+    "zhuànqián": {
+      "latest": "half remembered",
+      "latest_at": "2026-11-16T04:59:17.138Z",
+      "history": [
+        {
+          "result": "half remembered",
+          "at": "2026-11-16T04:59:17.138Z"
+        }
+      ],
+      "meaning": "make money",
+      "learned_date": "2026-10-13"
+    },
+    "bù tóng": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T04:59:19.064Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T04:59:19.064Z"
+        }
+      ],
+      "meaning": "different (formal)",
+      "learned_date": "2026-10-14"
+    },
+    "bù yíyàng": {
+      "latest": "half remembered",
+      "latest_at": "2026-11-16T04:59:22.640Z",
+      "history": [
+        {
+          "result": "half remembered",
+          "at": "2026-11-16T04:59:22.640Z"
+        }
+      ],
+      "meaning": "different (casual)",
+      "learned_date": "2026-10-14"
+    },
+    "dìngzhì": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T04:59:23.581Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T04:59:23.581Z"
+        }
+      ],
+      "meaning": "customize",
+      "learned_date": "2026-10-14"
+    },
+    "kě dìngzhì de": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T04:59:25.978Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T04:59:25.978Z"
+        }
+      ],
+      "meaning": "customizable",
+      "learned_date": "2026-10-14"
+    },
+    "liǎng ge": {
+      "latest": "half remembered",
+      "latest_at": "2026-11-16T04:59:29.124Z",
+      "history": [
+        {
+          "result": "half remembered",
+          "at": "2026-11-16T04:59:29.124Z"
+        }
+      ],
+      "meaning": "two of",
+      "learned_date": "2026-10-14"
+    },
+    "liáo / liáo liáo": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T04:59:31.818Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T04:59:31.818Z"
+        }
+      ],
+      "meaning": "chat",
+      "learned_date": "2026-10-14"
+    },
+    "měi ge rén": {
+      "latest": "half remembered",
+      "latest_at": "2026-11-16T04:59:33.058Z",
+      "history": [
+        {
+          "result": "half remembered",
+          "at": "2026-11-16T04:59:33.058Z"
+        }
+      ],
+      "meaning": "every person",
+      "learned_date": "2026-10-14"
+    },
+    "pǐnpái": {
+      "latest": "half remembered",
+      "latest_at": "2026-11-16T04:59:35.062Z",
+      "history": [
+        {
+          "result": "half remembered",
+          "at": "2026-11-16T04:59:35.062Z"
+        }
+      ],
+      "meaning": "brand",
+      "learned_date": "2026-10-14"
+    },
+    "qù dào": {
+      "latest": "half remembered",
+      "latest_at": "2026-11-16T04:59:36.222Z",
+      "history": [
+        {
+          "result": "half remembered",
+          "at": "2026-11-16T04:59:36.222Z"
+        }
+      ],
+      "meaning": "go to, get to (a place)",
+      "learned_date": "2026-10-14"
+    },
+    "wèi": {
+      "latest": "half remembered",
+      "latest_at": "2026-11-16T04:59:40.295Z",
+      "history": [
+        {
+          "result": "half remembered",
+          "at": "2026-11-16T04:59:40.295Z"
+        }
+      ],
+      "meaning": "for",
+      "learned_date": "2026-10-14"
+    },
+    "xiǎngfǎ": {
+      "latest": "half remembered",
+      "latest_at": "2026-11-16T04:59:43.335Z",
+      "history": [
+        {
+          "result": "half remembered",
+          "at": "2026-11-16T04:59:43.335Z"
+        }
+      ],
+      "meaning": "way of thinking, idea",
+      "learned_date": "2026-10-14"
+    },
+    "yíyàng": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T04:59:44.890Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T04:59:44.890Z"
+        }
+      ],
+      "meaning": "same",
+      "learned_date": "2026-10-14"
+    },
+    "zhìnéngtǐ": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T04:59:46.134Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T04:59:46.134Z"
+        }
+      ],
+      "meaning": "AI agent",
+      "learned_date": "2026-10-14"
+    },
+    "bú yòng": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T04:59:46.352Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T04:59:46.352Z"
+        }
+      ],
+      "meaning": "no need to",
+      "learned_date": "2026-10-15"
+    },
+    "dìngdān": {
+      "latest": "half remembered",
+      "latest_at": "2026-11-16T04:59:50.071Z",
+      "history": [
+        {
+          "result": "half remembered",
+          "at": "2026-11-16T04:59:50.071Z"
+        }
+      ],
+      "meaning": "order (dìng = place, dān = slip)",
+      "learned_date": "2026-10-15"
+    },
+    "qíyú": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T04:59:52.997Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T04:59:52.997Z"
+        }
+      ],
+      "meaning": "the rest",
+      "learned_date": "2026-10-15"
+    },
+    "tíqián mài chū": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T04:59:55.352Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T04:59:55.352Z"
+        }
+      ],
+      "meaning": "sell early (tí = lift, qián = before; mài = sell, chū = out)",
+      "learned_date": "2026-10-15"
+    },
+    "wèile": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T04:59:58.271Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T04:59:58.271Z"
+        }
+      ],
+      "meaning": "for, in order to",
+      "learned_date": "2026-10-15"
+    },
+    "dàshēng": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T05:00:00.346Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T05:00:00.346Z"
+        }
+      ],
+      "meaning": "loud, loudly",
+      "learned_date": "2026-10-16"
+    },
+    "wàng": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T05:00:02.618Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T05:00:02.618Z"
+        }
+      ],
+      "meaning": "forget",
+      "learned_date": "2026-10-16"
+    },
+    "zāogāo": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T05:00:04.100Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T05:00:04.100Z"
+        }
+      ],
+      "meaning": "terrible",
+      "learned_date": "2026-10-16"
+    },
+    "zhùyìlì": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T05:00:07.978Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T05:00:07.978Z"
+        }
+      ],
+      "meaning": "attention",
+      "learned_date": "2026-10-16"
+    },
+    "chǎn": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T05:00:09.650Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T05:00:09.650Z"
+        }
+      ],
+      "meaning": "produce, yield",
+      "learned_date": "2026-10-18"
+    },
+    "chǎnliàng": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T05:00:11.700Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T05:00:11.700Z"
+        }
+      ],
+      "meaning": "output",
+      "learned_date": "2026-10-18"
+    },
+    "chǎnpǐn": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T05:00:13.431Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T05:00:13.431Z"
+        }
+      ],
+      "meaning": "product",
+      "learned_date": "2026-10-18"
+    },
+    "chǎnshēng": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T05:00:16.007Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T05:00:16.007Z"
+        }
+      ],
+      "meaning": "produce (a result or effect)",
+      "learned_date": "2026-10-18"
+    },
+    "shēngchǎn": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T05:00:20.509Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T05:00:20.509Z"
+        }
+      ],
+      "meaning": "manufacture",
+      "learned_date": "2026-10-18"
     }
   }
 }
