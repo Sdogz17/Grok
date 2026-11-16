@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16T04:49:18.644Z",
+  "updated_at": "2026-11-16T04:58:52.837Z",
   "words": {
     "zàihu": {
       "latest": "forgot",
@@ -1343,6 +1343,126 @@
         }
       ],
       "meaning": "what time",
+      "learned_date": "2026-10-13"
+    },
+    "zǒu": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T04:49:20.495Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T04:49:20.495Z"
+        }
+      ],
+      "meaning": "leave, go",
+      "learned_date": "2026-10-13"
+    },
+    "xiànzài": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T04:49:21.268Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T04:49:21.268Z"
+        }
+      ],
+      "meaning": "now",
+      "learned_date": "2026-10-13"
+    },
+    "xiǎng": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T04:49:22.318Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T04:49:22.318Z"
+        }
+      ],
+      "meaning": "want, think",
+      "learned_date": "2026-10-13"
+    },
+    "ná / dào": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T04:49:25.328Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T04:49:25.328Z"
+        }
+      ],
+      "meaning": "take in hand / arrive, to",
+      "learned_date": "2026-10-13"
+    },
+    "ràng": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T04:49:26.853Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T04:49:26.853Z"
+        }
+      ],
+      "meaning": "make, let",
+      "learned_date": "2026-10-13"
+    },
+    "gōngsī": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T04:49:27.311Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T04:49:27.311Z"
+        }
+      ],
+      "meaning": "company",
+      "learned_date": "2026-10-13"
+    },
+    "bāng": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T04:49:28.000Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T04:49:28.000Z"
+        }
+      ],
+      "meaning": "help",
+      "learned_date": "2026-10-13"
+    },
+    "Zhōngguó": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T04:49:28.982Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T04:49:28.982Z"
+        }
+      ],
+      "meaning": "China",
+      "learned_date": "2026-10-13"
+    },
+    "Nǐ juéde ne? / zěnme yàng": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T04:49:31.169Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T04:49:31.169Z"
+        }
+      ],
+      "meaning": "What do you think? / how about it",
+      "learned_date": "2026-10-13"
+    },
+    "fùzé": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T04:49:36.117Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T04:49:36.117Z"
+        }
+      ],
+      "meaning": "be in charge of",
       "learned_date": "2026-10-13"
     }
   }
