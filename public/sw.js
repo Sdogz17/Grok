@@ -1,4 +1,4 @@
-const CACHE = "mandarin-v3";
+const CACHE = "mandarin-v4";
 const BASE = new URL("./", self.location);
 
 self.addEventListener("install", (event) => {
