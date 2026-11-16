@@ -4,8 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#ffffff" />
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#191919" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    <script>
+      (function () {
+        var query = window.matchMedia("(prefers-color-scheme: dark)");
+        var meta = document.querySelector('meta[name="theme-color"]');
+        function apply() {
+          var dark = query.matches;
+          var color = dark ? "#191919" : "#ffffff";
+          if (meta) meta.setAttribute("content", color);
+          var root = document.documentElement;
+          root.style.colorScheme = dark ? "dark" : "light";
+          root.style.backgroundColor = color;
+          if (document.body) {
+            document.body.style.colorScheme = dark ? "dark" : "light";
+            document.body.style.backgroundColor = color;
+          }
+        }
+        apply();
+        if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", apply);
+        if (query.addEventListener) query.addEventListener("change", apply);
+        else query.addListener(apply);
+      })();
+    </script>
     <meta name="description" content="Mandarin words learned each day, in pinyin, against a goal of 10." />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
