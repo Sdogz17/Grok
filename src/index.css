@@ -834,15 +834,16 @@ ul {
   border-color: transparent;
 }
 
-.mark-btn.half {
-  color: var(--half-ink);
-  border-color: var(--half-dot);
-}
-
-.mark-btn.half.is-on,
+.mark-btn.half,
 .session-actions .mark-btn.half {
   background: var(--half);
   color: var(--half-ink);
+  border-color: transparent;
+}
+
+.mark-btn.half.is-on {
+  background: var(--half-dot);
+  color: #fff;
   border-color: transparent;
 }
 
