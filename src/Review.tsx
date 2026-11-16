@@ -1,15 +1,69 @@
 import { useState } from "react";
-import type { ReviewResult, ReviewStore, CatalogWord } from "./lib/review";
+import { DAYS } from "./data/days";
+import { todayIso } from "./lib/calendar";
+import type { ReviewMark, ReviewResult, ReviewStore, CatalogWord, PeriodStats } from "./lib/review";
 import {
   forgotWords,
   latestMark,
+  periodStats,
   resultsAll,
   resultsSinceCopy,
   reviewCounts,
   reviewQueue,
   shortDate,
   stampDay,
+  weekRange,
 } from "./lib/review";
+
+function PeriodCard(props: { label: string; stats: PeriodStats }) {
+  const sum = props.stats.remembered + props.stats.forgot + props.stats.fresh;
+  const width = (value: number) => (sum === 0 ? "0%" : `${(value / sum) * 100}%`);
+  return (
+    <div className="period-card">
+      <div className="period-label">{props.label}</div>
+      <div className="period-total">{props.stats.total}</div>
+      <div className="period-bar" aria-hidden="true">
+        <span className="remembered" style={{ width: width(props.stats.remembered) }} />
+        <span className="forgot" style={{ width: width(props.stats.forgot) }} />
+        <span className="fresh" style={{ width: width(props.stats.fresh) }} />
+      </div>
+      <p className="period-split">
+        <span className="remembered">{props.stats.remembered} remembered</span>
+        <span className="forgot">{props.stats.forgot} forgot</span>
+        <span>{props.stats.fresh} not reviewed</span>
+      </p>
+    </div>
+  );
+}
+
+export function PeriodPanel(props: { anchor: string; monthKey: string; year: number; marks: readonly ReviewMark[] }) {
+  const week = weekRange(props.anchor);
+  const day = periodStats(
+    DAYS.filter((item) => item.date === props.anchor),
+    props.marks,
+  );
+  const weekStats = periodStats(
+    DAYS.filter((item) => item.date >= week.start && item.date <= week.end),
+    props.marks,
+  );
+  const monthStats = periodStats(
+    DAYS.filter((item) => item.date.startsWith(props.monthKey)),
+    props.marks,
+  );
+  const yearStats = periodStats(
+    DAYS.filter((item) => item.date.startsWith(`${props.year}-`)),
+    props.marks,
+  );
+  const dayLabel = props.anchor === todayIso() ? `Today, ${shortDate(props.anchor)}` : shortDate(props.anchor);
+  return (
+    <section className="period-grid" aria-label="Words in this period">
+      <PeriodCard label={dayLabel} stats={day} />
+      <PeriodCard label="This week" stats={weekStats} />
+      <PeriodCard label="This month" stats={monthStats} />
+      <PeriodCard label="This year" stats={yearStats} />
+    </section>
+  );
+}
 
 export function MarkButtons(props: {
   pinyin: string;

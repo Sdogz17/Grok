@@ -182,3 +182,45 @@ export function shortDate(iso: string): string {
 export function stampDay(timestamp: string): string {
   return shortDate(todayIso(new Date(timestamp)));
 }
+
+export type PeriodStats = {
+  total: number;
+  remembered: number;
+  forgot: number;
+  fresh: number;
+};
+
+/** Monday–Sunday week that contains an ISO date. */
+export function weekRange(iso: string): { start: string; end: string } {
+  const [year, month, day] = iso.split("-").map((part) => Number(part));
+  const date = new Date(Date.UTC(year, month - 1, day));
+  const weekday = date.getUTCDay();
+  const mondayOffset = weekday === 0 ? -6 : 1 - weekday;
+  const start = new Date(date);
+  start.setUTCDate(date.getUTCDate() + mondayOffset);
+  const end = new Date(start);
+  end.setUTCDate(start.getUTCDate() + 6);
+  const isoOf = (value: Date) => {
+    const yy = value.getUTCFullYear();
+    const mm = String(value.getUTCMonth() + 1).padStart(2, "0");
+    const dd = String(value.getUTCDate()).padStart(2, "0");
+    return `${yy}-${mm}-${dd}`;
+  };
+  return { start: isoOf(start), end: isoOf(end) };
+}
+
+/** Totals use each day's count. Review splits count only the listed words. */
+export function periodStats(days: readonly StudyDay[], marks: readonly ReviewMark[]): PeriodStats {
+  let total = 0;
+  let remembered = 0;
+  let forgot = 0;
+  for (const day of days) {
+    total += day.count;
+    for (const word of day.words) {
+      const latest = latestMark(marks, word.pinyin);
+      if (latest?.result === "remembered") remembered += 1;
+      else if (latest?.result === "forgot") forgot += 1;
+    }
+  }
+  return { total, remembered, forgot, fresh: Math.max(0, total - remembered - forgot) };
+}

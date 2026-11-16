@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
 import { DAYS, GOAL, type StudyDay } from "./data/days";
-import { NeedsReview, WordReview } from "./Review";
+import { NeedsReview, PeriodPanel, WordReview } from "./Review";
 import { catalog, forgottenPinyins, loadReview, saveReview, toggleMark, type ReviewResult } from "./lib/review";
 import {
   MONTH_NAMES,
@@ -39,6 +39,7 @@ export default function App() {
   const today = useMemo(() => todayIso(), []);
   const [month, setMonth] = useState(stats.latestMonth);
   const [view, setView] = useState<"calendar" | "review">("calendar");
+  const [focusDate, setFocusDate] = useState<string | null>(null);
   const [store, setStore] = useState(loadReview);
   const forgotten = useMemo(() => forgottenPinyins(store.marks), [store.marks]);
   const [selected, setSelected] = useState<string | null>(null);
@@ -99,6 +100,7 @@ export default function App() {
     ignoreCloseUntil.current = performance.now() + CLOSE_GUARD_MS;
     openToken.current += 1;
     setShield(true);
+    setFocusDate(iso);
     setSelected(iso);
   }
 
@@ -244,6 +246,13 @@ export default function App() {
             );
           })}
         </div>
+
+        <PeriodPanel
+          anchor={focusDate ?? today}
+          monthKey={month}
+          year={year}
+          marks={store.marks}
+        />
 
         <div className="legend">
           <div className="legend-item">
