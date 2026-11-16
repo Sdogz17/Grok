@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16T04:45:27.336Z",
+  "updated_at": "2026-11-16T04:46:31.741Z",
   "words": {
     "zàihu": {
       "latest": "forgot",
@@ -62,12 +62,16 @@
       "learned_date": "2026-11-13"
     },
     "de huà": {
-      "latest": "forgot",
-      "latest_at": "2026-11-16T03:55:28.916Z",
+      "latest": "remembered",
+      "latest_at": "2026-11-16T04:45:44.256Z",
       "history": [
         {
           "result": "forgot",
           "at": "2026-11-16T03:55:28.916Z"
+        },
+        {
+          "result": "remembered",
+          "at": "2026-11-16T04:45:44.256Z"
         }
       ],
       "meaning": "if (rúguǒ … de huà)",
@@ -230,12 +234,16 @@
       "learned_date": "2026-11-13"
     },
     "shǎ": {
-      "latest": "forgot",
-      "latest_at": "2026-11-16T03:56:01.735Z",
+      "latest": "remembered",
+      "latest_at": "2026-11-16T04:46:01.473Z",
       "history": [
         {
           "result": "forgot",
           "at": "2026-11-16T03:56:01.735Z"
+        },
+        {
+          "result": "remembered",
+          "at": "2026-11-16T04:46:01.473Z"
         }
       ],
       "meaning": "dumb, silly (casual)",
@@ -746,12 +754,16 @@
       "learned_date": "2026-11-05"
     },
     "tīngdǒng": {
-      "latest": "forgot",
-      "latest_at": "2026-11-16T03:57:40.143Z",
+      "latest": "remembered",
+      "latest_at": "2026-11-16T04:46:09.382Z",
       "history": [
         {
           "result": "forgot",
           "at": "2026-11-16T03:57:40.143Z"
+        },
+        {
+          "result": "remembered",
+          "at": "2026-11-16T04:46:09.382Z"
         }
       ],
       "meaning": "understand by listening, catch (wǒ méi tīngdǒng = I didn't catch that)",
