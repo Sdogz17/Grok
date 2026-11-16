@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
 import { DAYS, GOAL, type StudyDay } from "./data/days";
+import { NeedsReview, WordReview } from "./Review";
+import { catalog, forgottenPinyins, loadReview, saveReview, toggleMark, type ReviewResult } from "./lib/review";
 import {
   MONTH_NAMES,
   WEEKDAYS,
@@ -32,9 +34,13 @@ function toneClass(day: StudyDay | undefined): string {
 
 export default function App() {
   const byDate = useMemo(() => indexDays(DAYS), []);
+  const words = useMemo(() => catalog(DAYS), []);
   const stats = useMemo(() => studyStats(DAYS), []);
   const today = useMemo(() => todayIso(), []);
   const [month, setMonth] = useState(stats.latestMonth);
+  const [view, setView] = useState<"calendar" | "review">("calendar");
+  const [store, setStore] = useState(loadReview);
+  const forgotten = useMemo(() => forgottenPinyins(store.marks), [store.marks]);
   const [selected, setSelected] = useState<string | null>(null);
   const [shield, setShield] = useState(false);
   const openToken = useRef(0);
@@ -71,6 +77,22 @@ export default function App() {
     };
   }, [open, selected]);
 
+  function mark(pinyin: string, result: ReviewResult) {
+    setStore((current) => {
+      const next = toggleMark(current, pinyin, result);
+      saveReview(next);
+      return next;
+    });
+  }
+
+  function copied(at: string) {
+    setStore((current) => {
+      const next = { ...current, lastCopiedAt: at };
+      saveReview(next);
+      return next;
+    });
+  }
+
   function openDay(iso: string) {
     if (performance.now() - lastSwipeAt.current < 500) return;
     restoreFocus.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
@@ -96,7 +118,7 @@ export default function App() {
   }
 
   function onPointerDown(event: ReactPointerEvent<HTMLElement>) {
-    if (open) return;
+    if (open || view !== "calendar") return;
     if (event.pointerType === "mouse" && event.button !== 0) return;
     origin.current = { x: event.clientX, y: event.clientY, id: event.pointerId, captured: false };
   }
@@ -142,6 +164,30 @@ export default function App() {
           origin.current = null;
         }}
       >
+        <div className="view-tabs" role="tablist" aria-label="Views">
+          <button
+            type="button"
+            className="nav-btn"
+            role="tab"
+            aria-selected={view === "calendar"}
+            onClick={() => setView("calendar")}
+          >
+            Calendar
+          </button>
+          <button
+            type="button"
+            className="nav-btn"
+            role="tab"
+            aria-selected={view === "review"}
+            onClick={() => setView("review")}
+          >
+            Needs review
+          </button>
+        </div>
+        {view === "review" ? (
+          <NeedsReview words={words} store={store} onMark={mark} onCopied={copied} />
+        ) : (
+          <>
         <div className="month-head">
           <div>
             <h1 className="month-title">
@@ -180,18 +226,20 @@ export default function App() {
             const tone = toneClass(record);
             const isToday = iso === today;
             const isSelected = open && selected === iso;
+            const hasForgot = !!record?.words.some((word) => forgotten.has(word.pinyin));
             return (
               <button
                 key={iso}
                 type="button"
                 className={["day", tone, isSelected ? "is-selected" : ""].filter(Boolean).join(" ")}
                 aria-pressed={isSelected}
-                aria-label={dayLabel(iso, today, record ? record.count : null)}
+                aria-label={`${dayLabel(iso, today, record ? record.count : null)}${hasForgot ? ", forgotten words" : ""}`}
                 data-date={iso}
                 onClick={() => openDay(iso)}
               >
                 <span className={isToday ? "date is-today" : "date"}>{dayNumber}</span>
                 {record && record.count > 0 ? <span className="count">{record.count}</span> : null}
+                {hasForgot ? <span className="forgot-dot" aria-hidden="true" /> : null}
               </button>
             );
           })}
@@ -211,6 +259,10 @@ export default function App() {
               2
             </span>
             Today
+          </div>
+          <div className="legend-item">
+            <span className="forgot-dot legend-dot" aria-hidden="true" />
+            Forgot
           </div>
         </div>
         <p className="hint">Swipe right for the next month, left for the previous.</p>
@@ -233,6 +285,8 @@ export default function App() {
             <div className="stat-value">{stats.streak}</div>
           </div>
         </section>
+          </>
+        )}
       </main>
 
       {open && selected && selectedParts ? (
@@ -283,12 +337,13 @@ export default function App() {
                         </div>
                         <ul className="words">
                           {selectedDay.words.map((word, index) => (
-                            <li className="word" key={`${word.pinyin}-${index}`}>
-                              <span className="pinyin" lang="zh-Latn">
-                                {word.pinyin}
-                              </span>
-                              <span className="meaning">{word.meaning}</span>
-                            </li>
+                            <WordReview
+                              key={`${word.pinyin}-${index}`}
+                              pinyin={word.pinyin}
+                              meaning={word.meaning}
+                              store={store}
+                              onMark={mark}
+                            />
                           ))}
                         </ul>
                       </>

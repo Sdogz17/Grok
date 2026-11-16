@@ -20,6 +20,9 @@
   --scrim: rgba(15, 15, 15, 0.4);
   --shadow: 0 0 0 1px rgba(15, 15, 15, 0.08), 0 4px 12px rgba(15, 15, 15, 0.08), 0 16px 36px rgba(15, 15, 15, 0.12);
   --focus: #2383e2;
+  --forgot: #f8e4e2;
+  --forgot-ink: #8f2d2a;
+  --dot: #b42318;
   --ease: cubic-bezier(0.23, 1, 0.32, 1);
   font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -50,6 +53,9 @@
     --scrim: rgba(0, 0, 0, 0.62);
     --shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 12px 32px rgba(0, 0, 0, 0.45);
     --focus: #529cca;
+    --forgot: #5a3332;
+    --forgot-ink: #ffb4ae;
+    --dot: #ff8a80;
   }
 }
 
@@ -210,7 +216,21 @@ ul {
   min-height: 28px;
 }
 
+.view-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.view-tabs .nav-btn[aria-selected="true"] {
+  background: var(--ink);
+  color: var(--on-ink);
+  border-color: var(--ink);
+}
+
 .day {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -485,10 +505,119 @@ ul {
 .word {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  column-gap: 12px;
+  row-gap: 8px;
+  padding: 8px 0;
+}
+
+.word-copy {
+  flex: 1 1 12rem;
+  display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   column-gap: 16px;
   row-gap: 2px;
-  padding: 8px 0;
+  min-width: 0;
+}
+
+.word.is-remembered {
+  background: var(--met);
+  margin-inline: -8px;
+  padding-inline: 8px;
+  border-radius: 6px;
+}
+
+.word.is-forgot {
+  background: var(--forgot);
+  margin-inline: -8px;
+  padding-inline: 8px;
+  border-radius: 6px;
+}
+
+.reviewed {
+  flex: 1 1 100%;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.review-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mark-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  background: var(--ground);
+  font-size: 14px;
+}
+
+.mark-btn.is-on.remembered {
+  background: var(--met);
+  color: var(--met-ink);
+  border-color: transparent;
+}
+
+.mark-btn.is-on.forgot {
+  background: var(--forgot);
+  color: var(--forgot-ink);
+  border-color: transparent;
+}
+
+.forgot-dot {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--dot);
+}
+
+.forgot-dot.legend-dot {
+  position: static;
+}
+
+.copy-actions,
+.session-actions {
+  margin-top: 16px;
+}
+
+.review-counts {
+  margin-top: 20px;
+}
+
+.copy-box {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  background: var(--ground);
+  color: var(--ink);
+  font: inherit;
+  font-size: 14px;
+}
+
+.session-pinyin {
+  margin: 16px 0 12px;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.needs .words {
+  margin-top: 8px;
 }
 
 .word + .word {
