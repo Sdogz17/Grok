@@ -359,14 +359,17 @@ export const DAYS: StudyDay[] = [
   },
   {
     date: "2026-11-15",
-    count: 1,
-    summary: "Mined 30 words from the Oct 15 product meeting plus general verbs and nouns, learning them one by one with spaced-repetition examples. Used yuángōng in 'Yuánlái wǒmen duìshǒu de yuángōng yǒu gèng duō jīngyàn'.",
+    count: 4,
+    summary: "Mined 30 words from the Oct 15 product meeting plus general verbs and nouns, learning them one by one with spaced-repetition examples. Used yuángōng in 'Yuánlái wǒmen duìshǒu de yuángōng yǒu gèng duō jīngyàn', jùjué in 'Zuìjìn lǎobǎn jùjué le wǒ de yíngxiāo jìhuà', and chūchāi plus fù qián in 'Wǒmen chūchāi de shíhou, lǎobǎn yìzhí fù qián'.",
     grammar: [
       "yuánlái = turns out (start of sentence or after subject); also 'originally'",
       "jùjué + object directly, no duì",
     ],
     words: [
       { pinyin: "yuángōng", meaning: "employee (yuán = member, gōng = work)" },
+      { pinyin: "jùjué", meaning: "reject, refuse (+ object directly)" },
+      { pinyin: "chūchāi", meaning: "business trip (lǚyóu = vacation)" },
+      { pinyin: "fù qián", meaning: "pay (mǎidān = pick up the bill)" },
     ],
   },
 ];
