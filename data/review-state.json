@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16T04:46:31.741Z",
+  "updated_at": "2026-11-16T04:48:16.902Z",
   "words": {
     "zàihu": {
       "latest": "forgot",
@@ -984,6 +984,30 @@
       ],
       "meaning": "clear, explicit (everyday: qīngchu)",
       "learned_date": "2026-11-02"
+    },
+    "hái méiyǒu": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T04:48:11.398Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T04:48:11.398Z"
+        }
+      ],
+      "meaning": "not yet",
+      "learned_date": "2026-10-13"
+    },
+    "zhǎodào": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T04:48:12.473Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T04:48:12.473Z"
+        }
+      ],
+      "meaning": "found",
+      "learned_date": "2026-10-13"
     }
   }
 }
