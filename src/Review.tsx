@@ -4,10 +4,12 @@ import { todayIso } from "./lib/calendar";
 import type { ReviewMark, ReviewResult, ReviewStore, CatalogWord, PeriodStats } from "./lib/review";
 import {
   forgotWords,
+  halfWords,
   latestMark,
   periodStats,
   resultsAll,
   resultsSinceCopy,
+  resultTone,
   reviewCounts,
   reviewQueue,
   shortDate,
@@ -16,7 +18,7 @@ import {
 } from "./lib/review";
 
 function PeriodCard(props: { label: string; stats: PeriodStats }) {
-  const sum = props.stats.remembered + props.stats.forgot + props.stats.fresh;
+  const sum = props.stats.remembered + props.stats.half + props.stats.forgot + props.stats.fresh;
   const width = (value: number) => (sum === 0 ? "0%" : `${(value / sum) * 100}%`);
   return (
     <div className="period-card">
@@ -24,11 +26,13 @@ function PeriodCard(props: { label: string; stats: PeriodStats }) {
       <div className="period-total">{props.stats.total}</div>
       <div className="period-bar" aria-hidden="true">
         <span className="remembered" style={{ width: width(props.stats.remembered) }} />
+        <span className="half" style={{ width: width(props.stats.half) }} />
         <span className="forgot" style={{ width: width(props.stats.forgot) }} />
         <span className="fresh" style={{ width: width(props.stats.fresh) }} />
       </div>
       <p className="period-split">
         <span className="remembered">{props.stats.remembered} remembered</span>
+        <span className="half">{props.stats.half} half remembered</span>
         <span className="forgot">{props.stats.forgot} forgot</span>
         <span>{props.stats.fresh} not reviewed</span>
       </p>
@@ -88,6 +92,19 @@ export function MarkButtons(props: {
       </button>
       <button
         type="button"
+        className={latest?.result === "half remembered" ? "mark-btn half is-on" : "mark-btn half"}
+        aria-pressed={latest?.result === "half remembered"}
+        aria-label={`Half remembered ${props.pinyin}`}
+        onClick={(event) => {
+          event.stopPropagation();
+          props.onMark(props.pinyin, "half remembered");
+        }}
+      >
+        <span aria-hidden="true">◐</span>
+        Half remembered
+      </button>
+      <button
+        type="button"
         className={latest?.result === "forgot" ? "mark-btn is-on forgot" : "mark-btn"}
         aria-pressed={latest?.result === "forgot"}
         aria-label={`Forgot ${props.pinyin}`}
@@ -111,7 +128,7 @@ export function WordReview(props: {
 }) {
   const latest = latestMark(props.store.marks, props.pinyin);
   return (
-    <li className={latest ? `word is-${latest.result}` : "word"}>
+    <li className={latest ? `word is-${resultTone(latest.result)}` : "word"}>
       <div className="word-copy">
         <span className="pinyin" lang="zh-Latn">
           {props.pinyin}
@@ -170,11 +187,15 @@ export function NeedsReview(props: {
   return (
     <section className="needs" aria-label="Needs review">
       <h1 className="month-title">Needs review</h1>
-      <p className="month-line">Words you marked forgot, plus anything you have not marked yet.</p>
+      <p className="month-line">Words you marked forgot. The review session also includes half remembered words and anything not marked yet.</p>
       <div className="stats review-counts">
         <div className="stat">
           <div className="stat-label">Remembered</div>
           <div className="stat-value">{counts.remembered}</div>
+        </div>
+        <div className="stat">
+          <div className="stat-label">Half remembered</div>
+          <div className="stat-value">{counts.half}</div>
         </div>
         <div className="stat">
           <div className="stat-label">Forgot</div>
@@ -223,6 +244,46 @@ export function NeedsReview(props: {
                 <span className="pinyin" lang="zh-Latn">
                   {word.pinyin}
                 </span>
+                <span className="tag forgot">Forgot</span>
+                <span className="meaning">{word.meaning}</span>
+                <span className="reviewed">Learned {shortDate(word.learned)}</span>
+              </div>
+              <MarkButtons pinyin={word.pinyin} store={props.store} onMark={props.onMark} />
+            </li>
+          ))}
+        </ul>
+      )}
+    </section>
+  );
+}
+
+export function HalfReview(props: {
+  words: readonly CatalogWord[];
+  store: ReviewStore;
+  onMark: (pinyin: string, result: ReviewResult) => void;
+  onStudy: () => void;
+}) {
+  const half = halfWords(props.words, props.store.marks);
+  return (
+    <section className="needs" aria-label="Half remembered">
+      <h1 className="month-title">Half remembered</h1>
+      <p className="month-line">
+        {half.length === 1 ? "1 word marked half remembered." : `${half.length} words marked half remembered.`}
+      </p>
+      <button type="button" className="nav-btn" onClick={props.onStudy} disabled={half.length === 0}>
+        Study as cards
+      </button>
+      {half.length === 0 ? (
+        <p className="empty">No words marked half remembered.</p>
+      ) : (
+        <ul className="words">
+          {half.map((word) => (
+            <li key={word.pinyin} className="word is-half">
+              <div className="word-copy">
+                <span className="pinyin" lang="zh-Latn">
+                  {word.pinyin}
+                </span>
+                <span className="tag half">Half remembered</span>
                 <span className="meaning">{word.meaning}</span>
                 <span className="reviewed">Learned {shortDate(word.learned)}</span>
               </div>
@@ -261,7 +322,7 @@ function ReviewSession(props: {
         <h1 className="month-title">{props.queue.length === 0 ? "Nothing to review" : "Session done"}</h1>
         <p className="month-line">
           {props.queue.length === 0
-            ? "Unreviewed words and words you forgot will show up here."
+            ? "Unreviewed, half remembered, and forgotten words will show up here."
             : "You reached the end of this session."}
         </p>
         <button type="button" className="nav-btn" onClick={props.onClose}>
@@ -290,6 +351,10 @@ function ReviewSession(props: {
         <button type="button" className="mark-btn" onClick={() => mark("remembered")}>
           <span aria-hidden="true">✓</span>
           Remembered
+        </button>
+        <button type="button" className="mark-btn half" onClick={() => mark("half remembered")}>
+          <span aria-hidden="true">◐</span>
+          Half remembered
         </button>
         <button type="button" className="mark-btn" onClick={() => mark("forgot")}>
           <span aria-hidden="true">×</span>

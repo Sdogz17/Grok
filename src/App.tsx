@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
 import { DAYS, GOAL, type StudyDay } from "./data/days";
 import { Flashcards, ToReview, type Deck } from "./Flashcards";
-import { NeedsReview, PeriodPanel, WordReview } from "./Review";
+import { HalfReview, NeedsReview, PeriodPanel, WordReview } from "./Review";
 import { SyncSettings, useSyncBridge } from "./SyncSettings";
-import { catalog, forgottenPinyins, loadReview, saveReview, toggleMark, type ReviewResult } from "./lib/review";
+import { catalog, forgottenPinyins, halfPinyins, loadReview, saveReview, toggleMark, type ReviewResult } from "./lib/review";
 import { scheduleSync, syncStatusLabel } from "./lib/sync";
 import {
   MONTH_NAMES,
@@ -41,11 +41,12 @@ export default function App() {
   const stats = useMemo(() => studyStats(DAYS), []);
   const today = useMemo(() => todayIso(), []);
   const [month, setMonth] = useState(stats.latestMonth);
-  const [view, setView] = useState<"calendar" | "fresh" | "forgot" | "cards" | "settings">("calendar");
+  const [view, setView] = useState<"calendar" | "fresh" | "half" | "forgot" | "cards" | "settings">("calendar");
   const [cardDeck, setCardDeck] = useState<Deck | null>(null);
   const [focusDate, setFocusDate] = useState<string | null>(null);
   const [store, setStore] = useState(loadReview);
   const forgotten = useMemo(() => forgottenPinyins(store.marks), [store.marks]);
+  const half = useMemo(() => halfPinyins(store.marks), [store.marks]);
   const [selected, setSelected] = useState<string | null>(null);
   const [shield, setShield] = useState(false);
   const openToken = useRef(0);
@@ -180,6 +181,9 @@ export default function App() {
             <button type="button" className="nav-btn" role="tab" aria-selected={view === "fresh"} onClick={() => setView("fresh")}>
               To review
             </button>
+            <button type="button" className="nav-btn" role="tab" aria-selected={view === "half"} onClick={() => setView("half")}>
+              Half remembered
+            </button>
             <button type="button" className="nav-btn" role="tab" aria-selected={view === "forgot"} onClick={() => setView("forgot")}>
               Forgot
             </button>
@@ -214,6 +218,16 @@ export default function App() {
             onMark={mark}
             onStudy={() => {
               setCardDeck("fresh");
+              setView("cards");
+            }}
+          />
+        ) : view === "half" ? (
+          <HalfReview
+            words={words}
+            store={store}
+            onMark={mark}
+            onStudy={() => {
+              setCardDeck("half");
               setView("cards");
             }}
           />
@@ -264,19 +278,22 @@ export default function App() {
             const isToday = iso === today;
             const isSelected = open && selected === iso;
             const hasForgot = !!record?.words.some((word) => forgotten.has(word.pinyin));
+            const hasHalf = !!record?.words.some((word) => half.has(word.pinyin));
+            const marks = [hasHalf ? "half remembered words" : "", hasForgot ? "forgotten words" : ""].filter(Boolean);
             return (
               <button
                 key={iso}
                 type="button"
                 className={["day", tone, isSelected ? "is-selected" : ""].filter(Boolean).join(" ")}
                 aria-pressed={isSelected}
-                aria-label={`${dayLabel(iso, today, record ? record.count : null)}${hasForgot ? ", forgotten words" : ""}`}
+                aria-label={`${dayLabel(iso, today, record ? record.count : null)}${marks.length ? `, ${marks.join(", ")}` : ""}`}
                 data-date={iso}
                 onClick={() => openDay(iso)}
               >
                 <span className={isToday ? "date is-today" : "date"}>{dayNumber}</span>
                 {record && record.count > 0 ? <span className="count">{record.count}</span> : null}
                 {hasForgot ? <span className="forgot-dot" aria-hidden="true" /> : null}
+                {hasHalf ? <span className={hasForgot ? "half-dot with-forgot" : "half-dot"} aria-hidden="true" /> : null}
               </button>
             );
           })}
@@ -303,6 +320,10 @@ export default function App() {
               2
             </span>
             Today
+          </div>
+          <div className="legend-item">
+            <span className="half-dot legend-dot" aria-hidden="true" />
+            Half remembered
           </div>
           <div className="legend-item">
             <span className="forgot-dot legend-dot" aria-hidden="true" />

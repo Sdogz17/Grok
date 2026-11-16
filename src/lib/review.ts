@@ -1,7 +1,18 @@
 import { DAYS, type StudyDay } from "../data/days";
 import { todayIso } from "./calendar";
 
-export type ReviewResult = "remembered" | "forgot";
+export type ReviewResult = "remembered" | "forgot" | "half remembered";
+
+export function asResult(value: unknown): ReviewResult | null {
+  if (value === "half") return "half remembered";
+  if (value === "remembered" || value === "forgot" || value === "half remembered") return value;
+  return null;
+}
+
+export function resultTone(result: ReviewResult): "remembered" | "forgot" | "half" {
+  if (result === "half remembered") return "half";
+  return result;
+}
 
 export type ReviewMark = {
   pinyin: string;
@@ -31,13 +42,12 @@ export function loadReview(): ReviewStore {
     if (!raw) return EMPTY;
     const parsed = JSON.parse(raw) as Partial<ReviewStore>;
     const marks = Array.isArray(parsed.marks)
-      ? parsed.marks.filter(
-          (mark): mark is ReviewMark =>
-            !!mark &&
-            typeof mark.pinyin === "string" &&
-            (mark.result === "remembered" || mark.result === "forgot") &&
-            typeof mark.timestamp === "string",
-        )
+      ? parsed.marks.flatMap((mark) => {
+          if (!mark || typeof mark.pinyin !== "string" || typeof mark.timestamp !== "string") return [];
+          const result = asResult(mark.result);
+          if (!result) return [];
+          return [{ pinyin: mark.pinyin, result, timestamp: mark.timestamp }];
+        })
       : [];
     return {
       marks,
@@ -121,21 +131,34 @@ export function forgottenPinyins(marks: readonly ReviewMark[]): Set<string> {
   return forgotten;
 }
 
+export function halfPinyins(marks: readonly ReviewMark[]): Set<string> {
+  const latest = new Map<string, ReviewResult>();
+  for (const mark of marks) latest.set(mark.pinyin, mark.result);
+  const half = new Set<string>();
+  for (const [pinyin, result] of latest) {
+    if (result === "half remembered") half.add(pinyin);
+  }
+  return half;
+}
+
 export function reviewCounts(words: readonly CatalogWord[], marks: readonly ReviewMark[]): {
   remembered: number;
+  half: number;
   forgot: number;
   fresh: number;
 } {
   let remembered = 0;
+  let half = 0;
   let forgot = 0;
   let fresh = 0;
   for (const word of words) {
     const latest = latestMark(marks, word.pinyin);
     if (!latest) fresh += 1;
     else if (latest.result === "remembered") remembered += 1;
+    else if (latest.result === "half remembered") half += 1;
     else forgot += 1;
   }
-  return { remembered, forgot, fresh };
+  return { remembered, half, forgot, fresh };
 }
 
 export function forgotWords(words: readonly CatalogWord[], marks: readonly ReviewMark[]): CatalogWord[] {
@@ -144,12 +167,18 @@ export function forgotWords(words: readonly CatalogWord[], marks: readonly Revie
     .sort((a, b) => a.learned.localeCompare(b.learned) || a.pinyin.localeCompare(b.pinyin));
 }
 
-/** Unreviewed first (oldest learned), then forgotten words oldest review first. */
+export function halfWords(words: readonly CatalogWord[], marks: readonly ReviewMark[]): CatalogWord[] {
+  return words
+    .filter((word) => latestMark(marks, word.pinyin)?.result === "half remembered")
+    .sort((a, b) => a.learned.localeCompare(b.learned) || a.pinyin.localeCompare(b.pinyin));
+}
+
+/** Unreviewed first, then half remembered and forgotten, oldest review first. */
 export function reviewQueue(words: readonly CatalogWord[], marks: readonly ReviewMark[]): CatalogWord[] {
   return words
     .filter((word) => {
       const latest = latestMark(marks, word.pinyin);
-      return !latest || latest.result === "forgot";
+      return !latest || latest.result === "forgot" || latest.result === "half remembered";
     })
     .sort((a, b) => {
       const ta = latestMark(marks, a.pinyin)?.timestamp ?? "";
@@ -159,38 +188,51 @@ export function reviewQueue(words: readonly CatalogWord[], marks: readonly Revie
     });
 }
 
-export function formatResults(forgot: readonly string[], remembered: readonly string[], day = todayIso()): string {
+export function formatResults(
+  forgot: readonly string[],
+  half: readonly string[],
+  remembered: readonly string[],
+  day = todayIso(),
+): string {
   return [
     `REVIEW RESULTS (${day})`,
     `Forgot: ${forgot.length ? forgot.join(", ") : "none"}`,
+    `Half remembered: ${half.length ? half.join(", ") : "none"}`,
     `Remembered: ${remembered.length ? remembered.join(", ") : "none"}`,
   ].join("\n");
 }
 
-function groupedSince(marks: readonly ReviewMark[], after: string | null): { forgot: string[]; remembered: string[] } {
+function groupedSince(
+  marks: readonly ReviewMark[],
+  after: string | null,
+): { forgot: string[]; half: string[]; remembered: string[] } {
   const latest = new Map<string, ReviewMark>();
   for (const mark of marks) {
     if (after && mark.timestamp <= after) continue;
     latest.set(mark.pinyin, mark);
   }
   const forgot: string[] = [];
+  const half: string[] = [];
   const remembered: string[] = [];
   for (const [pinyin, mark] of latest) {
-    (mark.result === "forgot" ? forgot : remembered).push(pinyin);
+    if (mark.result === "forgot") forgot.push(pinyin);
+    else if (mark.result === "half remembered") half.push(pinyin);
+    else if (mark.result === "remembered") remembered.push(pinyin);
   }
   forgot.sort();
+  half.sort();
   remembered.sort();
-  return { forgot, remembered };
+  return { forgot, half, remembered };
 }
 
 export function resultsSinceCopy(store: ReviewStore, day = todayIso()): string {
   const groups = groupedSince(store.marks, store.lastCopiedAt);
-  return formatResults(groups.forgot, groups.remembered, day);
+  return formatResults(groups.forgot, groups.half, groups.remembered, day);
 }
 
 export function resultsAll(store: ReviewStore, day = todayIso()): string {
   const groups = groupedSince(store.marks, null);
-  return formatResults(groups.forgot, groups.remembered, day);
+  return formatResults(groups.forgot, groups.half, groups.remembered, day);
 }
 
 export function shortDate(iso: string): string {
@@ -207,6 +249,7 @@ export function stampDay(timestamp: string): string {
 export type PeriodStats = {
   total: number;
   remembered: number;
+  half: number;
   forgot: number;
   fresh: number;
 };
@@ -234,14 +277,16 @@ export function weekRange(iso: string): { start: string; end: string } {
 export function periodStats(days: readonly StudyDay[], marks: readonly ReviewMark[]): PeriodStats {
   let total = 0;
   let remembered = 0;
+  let half = 0;
   let forgot = 0;
   for (const day of days) {
     total += day.count;
     for (const word of day.words) {
       const latest = latestMark(marks, word.pinyin);
       if (latest?.result === "remembered") remembered += 1;
+      else if (latest?.result === "half remembered") half += 1;
       else if (latest?.result === "forgot") forgot += 1;
     }
   }
-  return { total, remembered, forgot, fresh: Math.max(0, total - remembered - forgot) };
+  return { total, remembered, half, forgot, fresh: Math.max(0, total - remembered - half - forgot) };
 }

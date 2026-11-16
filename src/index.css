@@ -23,6 +23,9 @@
   --forgot: #f8e4e2;
   --forgot-ink: #8f2d2a;
   --dot: #b42318;
+  --half: #fde7c2;
+  --half-ink: #8a4b08;
+  --half-dot: #e07a12;
   --ease: cubic-bezier(0.23, 1, 0.32, 1);
   font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -71,6 +74,9 @@ body {
     --forgot: #5a3332;
     --forgot-ink: #ffb4ae;
     --dot: #ff8a80;
+    --half: #5a3d1c;
+    --half-ink: #ffc48a;
+    --half-dot: #f5a524;
   }
 
   html,
@@ -500,6 +506,10 @@ ul {
   background: var(--met-ink);
 }
 
+.period-bar .half {
+  background: var(--half-dot);
+}
+
 .period-bar .forgot {
   background: var(--dot);
 }
@@ -520,6 +530,10 @@ ul {
 
 .period-split .remembered {
   color: var(--met-ink);
+}
+
+.period-split .half {
+  color: var(--half-ink);
 }
 
 .period-split .forgot {
@@ -756,11 +770,36 @@ ul {
   border-radius: 6px;
 }
 
+.word.is-half {
+  background: var(--half);
+  margin-inline: -8px;
+  padding-inline: 8px;
+  border-radius: 6px;
+}
+
 .word.is-forgot {
   background: var(--forgot);
   margin-inline: -8px;
   padding-inline: 8px;
   border-radius: 6px;
+}
+
+.tag {
+  border-radius: 999px;
+  padding: 1px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.tag.half {
+  background: var(--half-dot);
+  color: #fff;
+}
+
+.tag.forgot {
+  background: var(--dot);
+  color: #fff;
 }
 
 .reviewed {
@@ -795,6 +834,18 @@ ul {
   border-color: transparent;
 }
 
+.mark-btn.half {
+  color: var(--half-ink);
+  border-color: var(--half-dot);
+}
+
+.mark-btn.half.is-on,
+.session-actions .mark-btn.half {
+  background: var(--half);
+  color: var(--half-ink);
+  border-color: transparent;
+}
+
 .mark-btn.is-on.forgot {
   background: var(--forgot);
   color: var(--forgot-ink);
@@ -811,8 +862,23 @@ ul {
   background: var(--dot);
 }
 
-.forgot-dot.legend-dot {
+.forgot-dot.legend-dot,
+.half-dot.legend-dot {
   position: static;
+}
+
+.half-dot {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--half-dot);
+}
+
+.half-dot.with-forgot {
+  right: 18px;
 }
 
 .copy-actions,

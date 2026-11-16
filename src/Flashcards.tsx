@@ -2,19 +2,25 @@ import { useRef, useState } from "react";
 import { MarkButtons } from "./Review";
 import { todayIso } from "./lib/calendar";
 import type { CatalogWord, ReviewResult, ReviewStore } from "./lib/review";
-import { formatResults, frontMeaning, latestMark, reviewQueue } from "./lib/review";
+import { formatResults, frontMeaning, latestMark, resultTone, reviewQueue } from "./lib/review";
 
-export type Deck = "fresh" | "forgot" | "remembered" | "all";
+export type Deck = "fresh" | "half" | "forgot" | "remembered" | "all";
 
 const DECKS: { id: Deck; label: string; detail: string }[] = [
-  { id: "fresh", label: "To review", detail: "No mark yet" },
+  { id: "fresh", label: "To review", detail: "No mark yet, half remembered, and forgot" },
+  { id: "half", label: "Half remembered", detail: "Latest mark is half remembered" },
   { id: "forgot", label: "Forgot", detail: "Latest mark is forgot" },
   { id: "remembered", label: "Remembered", detail: "Latest mark is remembered" },
   { id: "all", label: "All words", detail: "Every word, with an optional date range" },
 ];
 
 function deckWords(deck: Deck, words: readonly CatalogWord[], store: ReviewStore, from: string, to: string): CatalogWord[] {
-  if (deck === "fresh") return reviewQueue(words, store.marks).filter((word) => !latestMark(store.marks, word.pinyin));
+  if (deck === "fresh") return reviewQueue(words, store.marks);
+  if (deck === "half") {
+    return words
+      .filter((word) => latestMark(store.marks, word.pinyin)?.result === "half remembered")
+      .sort((a, b) => a.learned.localeCompare(b.learned) || a.pinyin.localeCompare(b.pinyin));
+  }
   if (deck === "forgot") return reviewQueue(words, store.marks).filter((word) => latestMark(store.marks, word.pinyin)?.result === "forgot");
   if (deck === "remembered") {
     return words
@@ -41,30 +47,37 @@ export function ToReview(props: {
   onMark: (pinyin: string, result: ReviewResult) => void;
   onStudy: () => void;
 }) {
-  const fresh = props.words.filter((word) => !latestMark(props.store.marks, word.pinyin));
+  const queue = reviewQueue(props.words, props.store.marks);
   return (
     <section className="needs" aria-label="To review">
       <h1 className="month-title">To review</h1>
-      <p className="month-line">{fresh.length === 1 ? "1 word with no mark yet." : `${fresh.length} words with no mark yet.`}</p>
-      <button type="button" className="nav-btn" onClick={props.onStudy} disabled={fresh.length === 0}>
+      <p className="month-line">
+        {queue.length === 1 ? "1 word still to review." : `${queue.length} words still to review.`} Not reviewed, half remembered, and forgot.
+      </p>
+      <button type="button" className="nav-btn" onClick={props.onStudy} disabled={queue.length === 0}>
         Study as cards
       </button>
-      {fresh.length === 0 ? (
-        <p className="empty">Every word has a mark.</p>
+      {queue.length === 0 ? (
+        <p className="empty">Every word is remembered.</p>
       ) : (
         <ul className="words">
-          {fresh.map((word) => (
-            <li key={word.pinyin} className="word">
-              <div className="word-copy">
-                <span className="pinyin" lang="zh-Latn">
-                  {word.pinyin}
-                </span>
-                <span className="meaning">{word.meaning}</span>
-                <span className="reviewed">Learned {word.learned}</span>
-              </div>
-              <MarkButtons pinyin={word.pinyin} store={props.store} onMark={props.onMark} />
-            </li>
-          ))}
+          {queue.map((word) => {
+            const latest = latestMark(props.store.marks, word.pinyin);
+            return (
+              <li key={word.pinyin} className={latest ? `word is-${resultTone(latest.result)}` : "word"}>
+                <div className="word-copy">
+                  <span className="pinyin" lang="zh-Latn">
+                    {word.pinyin}
+                  </span>
+                  {latest?.result === "half remembered" ? <span className="tag half">Half remembered</span> : null}
+                  {latest?.result === "forgot" ? <span className="tag forgot">Forgot</span> : null}
+                  <span className="meaning">{word.meaning}</span>
+                  <span className="reviewed">Learned {word.learned}</span>
+                </div>
+                <MarkButtons pinyin={word.pinyin} store={props.store} onMark={props.onMark} />
+              </li>
+            );
+          })}
         </ul>
       )}
     </section>
@@ -167,15 +180,20 @@ function CardRun(props: {
   }
 
   const remembered = Object.values(session).filter((result) => result === "remembered").length;
+  const half = Object.values(session).filter((result) => result === "half remembered").length;
   const forgot = Object.values(session).filter((result) => result === "forgot").length;
 
   async function copySession() {
     const forgotWords = Object.entries(session).filter(([, result]) => result === "forgot").map(([pinyin]) => pinyin).sort();
+    const halfWords = Object.entries(session)
+      .filter(([, result]) => result === "half remembered")
+      .map(([pinyin]) => pinyin)
+      .sort();
     const rememberedWords = Object.entries(session)
       .filter(([, result]) => result === "remembered")
       .map(([pinyin]) => pinyin)
       .sort();
-    const text = formatResults(forgotWords, rememberedWords, todayIso());
+    const text = formatResults(forgotWords, halfWords, rememberedWords, todayIso());
     try {
       if (navigator.clipboard?.writeText) {
         await navigator.clipboard.writeText(text);
@@ -194,7 +212,7 @@ function CardRun(props: {
       <section className="needs" aria-label="Deck summary">
         <h1 className="month-title">Deck done</h1>
         <p className="month-line">
-          {remembered} remembered, {forgot} forgot.
+          {remembered} remembered, {half} half remembered, {forgot} forgot.
         </p>
         <div className="nav copy-actions">
           <button
@@ -278,6 +296,10 @@ function CardRun(props: {
           <button type="button" className="mark-btn" onClick={() => answer("remembered")}>
             <span aria-hidden="true">✓</span>
             Remembered
+          </button>
+          <button type="button" className="mark-btn half" onClick={() => answer("half remembered")}>
+            <span aria-hidden="true">◐</span>
+            Half remembered
           </button>
           <button type="button" className="mark-btn" onClick={() => answer("forgot")}>
             <span aria-hidden="true">×</span>

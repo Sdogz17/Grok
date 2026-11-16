@@ -1,4 +1,4 @@
-import { catalog, loadReview, saveReview, type CatalogWord, type ReviewMark, type ReviewResult, type ReviewStore } from "./review";
+import { asResult, catalog, loadReview, saveReview, type CatalogWord, type ReviewMark, type ReviewResult, type ReviewStore } from "./review";
 
 export const TOKEN_KEY = "mandarin-github-token";
 export const SYNCED_AT_KEY = "mandarin-review-synced-at";
@@ -180,10 +180,11 @@ async function putRemote(token: string, state: RemoteState, sha: string | null, 
 
 export function mergeRemote(local: ReviewStore, remote: RemoteState | null): ReviewStore {
   const events = new Map<string, ReviewMark>();
-  const add = (pinyin: string, result: ReviewResult, timestamp: string) => {
-    if (!pinyin || (result !== "remembered" && result !== "forgot") || !timestamp) return;
+  const add = (pinyin: string, result: unknown, timestamp: string) => {
+    const normalized = asResult(result);
+    if (!pinyin || !normalized || !timestamp) return;
     const key = `${pinyin}\n${timestamp}`;
-    if (!events.has(key)) events.set(key, { pinyin, result, timestamp });
+    if (!events.has(key)) events.set(key, { pinyin, result: normalized, timestamp });
   };
   for (const mark of local.marks) add(mark.pinyin, mark.result, mark.timestamp);
   for (const [pinyin, word] of Object.entries(remote?.words ?? {})) {
