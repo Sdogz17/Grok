@@ -18,6 +18,7 @@ export type CatalogWord = {
   pinyin: string;
   meaning: string;
   learned: string;
+  example: { pinyin: string; english: string } | null;
 };
 
 export const REVIEW_KEY = "mandarin-review-v1";
@@ -55,13 +56,33 @@ export function saveReview(store: ReviewStore): void {
   }
 }
 
+function sentenceWith(summary: string, pinyin: string): { pinyin: string; english: string } | null {
+  if (!summary.includes(pinyin)) return null;
+  const sentence = summary.split(/(?<=\.)\s+/).find((part) => part.includes(pinyin)) ?? summary;
+  return { pinyin: sentence, english: "" };
+}
+
+export function frontMeaning(meaning: string): string {
+  const stripped = meaning
+    .replace(/\s*\([^)]*\)/g, "")
+    .replace(/\s{2,}/g, " ")
+    .replace(/^[,;:\s]+|[,;\s]+$/g, "")
+    .trim();
+  return stripped || meaning;
+}
+
 export function catalog(days: readonly StudyDay[] = DAYS): CatalogWord[] {
   const map = new Map<string, CatalogWord>();
   const sorted = [...days].sort((a, b) => a.date.localeCompare(b.date));
   for (const day of sorted) {
     for (const word of day.words) {
       if (!map.has(word.pinyin)) {
-        map.set(word.pinyin, { pinyin: word.pinyin, meaning: word.meaning, learned: day.date });
+        map.set(word.pinyin, {
+          pinyin: word.pinyin,
+          meaning: word.meaning,
+          learned: day.date,
+          example: word.example ?? sentenceWith(day.summary, word.pinyin),
+        });
       }
     }
   }

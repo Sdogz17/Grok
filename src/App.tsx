@@ -1,7 +1,10 @@
 import { useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
 import { DAYS, GOAL, type StudyDay } from "./data/days";
+import { Flashcards, ToReview, type Deck } from "./Flashcards";
 import { NeedsReview, PeriodPanel, WordReview } from "./Review";
+import { SyncSettings, useSyncBridge } from "./SyncSettings";
 import { catalog, forgottenPinyins, loadReview, saveReview, toggleMark, type ReviewResult } from "./lib/review";
+import { scheduleSync, syncStatusLabel } from "./lib/sync";
 import {
   MONTH_NAMES,
   WEEKDAYS,
@@ -38,7 +41,8 @@ export default function App() {
   const stats = useMemo(() => studyStats(DAYS), []);
   const today = useMemo(() => todayIso(), []);
   const [month, setMonth] = useState(stats.latestMonth);
-  const [view, setView] = useState<"calendar" | "review">("calendar");
+  const [view, setView] = useState<"calendar" | "fresh" | "forgot" | "cards" | "settings">("calendar");
+  const [cardDeck, setCardDeck] = useState<Deck | null>(null);
   const [focusDate, setFocusDate] = useState<string | null>(null);
   const [store, setStore] = useState(loadReview);
   const forgotten = useMemo(() => forgottenPinyins(store.marks), [store.marks]);
@@ -82,6 +86,7 @@ export default function App() {
     setStore((current) => {
       const next = toggleMark(current, pinyin, result);
       saveReview(next);
+      scheduleSync(next);
       return next;
     });
   }
@@ -150,6 +155,7 @@ export default function App() {
     setMonth((current) => shiftMonth(current, dx > 0 ? 1 : -1));
   }
 
+  const sync = useSyncBridge(store, setStore);
   const selectedParts = selected ? monthParts(selected.slice(0, 7)) : null;
   const selectedWeekday = selected ? WEEKDAYS_LONG[weekdayIndex(selected)] : "";
   const selectedDayNumber = selected ? Number(selected.slice(8)) : 0;
@@ -166,28 +172,57 @@ export default function App() {
           origin.current = null;
         }}
       >
-        <div className="view-tabs" role="tablist" aria-label="Views">
+        <div className="tab-row">
+          <div className="view-tabs" role="tablist" aria-label="Views">
+            <button type="button" className="nav-btn" role="tab" aria-selected={view === "calendar"} onClick={() => setView("calendar")}>
+              Calendar
+            </button>
+            <button type="button" className="nav-btn" role="tab" aria-selected={view === "fresh"} onClick={() => setView("fresh")}>
+              To review
+            </button>
+            <button type="button" className="nav-btn" role="tab" aria-selected={view === "forgot"} onClick={() => setView("forgot")}>
+              Forgot
+            </button>
+            <button
+              type="button"
+              className="nav-btn"
+              role="tab"
+              aria-selected={view === "cards"}
+              onClick={() => {
+                setCardDeck(null);
+                setView("cards");
+              }}
+            >
+              Flashcards
+            </button>
+          </div>
           <button
             type="button"
-            className="nav-btn"
-            role="tab"
-            aria-selected={view === "calendar"}
-            onClick={() => setView("calendar")}
+            className={view === "settings" ? "gear is-on" : "gear"}
+            aria-label="Sync settings"
+            aria-pressed={view === "settings"}
+            onClick={() => setView("settings")}
           >
-            Calendar
-          </button>
-          <button
-            type="button"
-            className="nav-btn"
-            role="tab"
-            aria-selected={view === "review"}
-            onClick={() => setView("review")}
-          >
-            Needs review
+            ⚙
           </button>
         </div>
-        {view === "review" ? (
+        <p className="sync-status">{syncStatusLabel(sync.status)}</p>
+        {view === "fresh" ? (
+          <ToReview
+            words={words}
+            store={store}
+            onMark={mark}
+            onStudy={() => {
+              setCardDeck("fresh");
+              setView("cards");
+            }}
+          />
+        ) : view === "forgot" ? (
           <NeedsReview words={words} store={store} onMark={mark} onCopied={copied} />
+        ) : view === "cards" ? (
+          <Flashcards words={words} store={store} onMark={mark} initialDeck={cardDeck} />
+        ) : view === "settings" ? (
+          <SyncSettings />
         ) : (
           <>
         <div className="month-head">

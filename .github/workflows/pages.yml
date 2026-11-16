@@ -3,6 +3,9 @@ name: Deploy GitHub Pages
 on:
   push:
     branches: [main]
+    # Review sync commits only this file. Ignoring it stops a deploy loop.
+    paths-ignore:
+      - "data/review-state.json"
   workflow_dispatch:
 
 permissions:
