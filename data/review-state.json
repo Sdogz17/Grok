@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16T05:00:20.699Z",
+  "updated_at": "2026-11-16T05:01:27.848Z",
   "words": {
     "zàihu": {
       "latest": "forgot",
@@ -1848,6 +1848,186 @@
       ],
       "meaning": "manufacture",
       "learned_date": "2026-10-18"
+    },
+    "xiàoguǒ": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T05:00:22.619Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T05:00:22.619Z"
+        }
+      ],
+      "meaning": "effect, result",
+      "learned_date": "2026-10-18"
+    },
+    "huánjìng": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T05:00:24.917Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T05:00:24.917Z"
+        }
+      ],
+      "meaning": "environment",
+      "learned_date": "2026-10-20"
+    },
+    "luójí": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T05:00:29.804Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T05:00:29.804Z"
+        }
+      ],
+      "meaning": "logic",
+      "learned_date": "2026-10-20"
+    },
+    "quánjú": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T05:00:32.782Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T05:00:32.782Z"
+        }
+      ],
+      "meaning": "global (quán = whole, jú = scope)",
+      "learned_date": "2026-10-20"
+    },
+    "xiàolǜ": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T05:00:35.189Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T05:00:35.189Z"
+        }
+      ],
+      "meaning": "efficiency (yǒu xiàolǜ = productive)",
+      "learned_date": "2026-10-20"
+    },
+    "yǐngxiǎng": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T05:00:37.372Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T05:00:37.372Z"
+        }
+      ],
+      "meaning": "affect, influence",
+      "learned_date": "2026-10-20"
+    },
+    "yìsi": {
+      "latest": "half remembered",
+      "latest_at": "2026-11-16T05:00:40.253Z",
+      "history": [
+        {
+          "result": "half remembered",
+          "at": "2026-11-16T05:00:40.253Z"
+        }
+      ],
+      "meaning": "meaning (yì = idea, sī = think)",
+      "learned_date": "2026-11-01"
+    },
+    "guì": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T05:00:42.219Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T05:00:42.219Z"
+        }
+      ],
+      "meaning": "expensive (opposite: piányi)",
+      "learned_date": "2026-11-14"
+    },
+    "kāifā rényuán": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T05:00:45.560Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T05:00:45.560Z"
+        }
+      ],
+      "meaning": "developer (casual: kāifā)",
+      "learned_date": "2026-11-14"
+    },
+    "lǐngdǎo": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T05:00:47.857Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T05:00:47.857Z"
+        }
+      ],
+      "meaning": "leader (lǐng = lead, dǎo = guide)",
+      "learned_date": "2026-11-14"
+    },
+    "chūchāi": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T05:00:50.792Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T05:00:50.792Z"
+        }
+      ],
+      "meaning": "business trip (lǚyóu = vacation)",
+      "learned_date": "2026-11-15"
+    },
+    "fù qián": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T05:00:52.390Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T05:00:52.390Z"
+        }
+      ],
+      "meaning": "pay (mǎidān = pick up the bill)",
+      "learned_date": "2026-11-15"
+    },
+    "jùjué": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T05:00:53.415Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T05:00:53.415Z"
+        }
+      ],
+      "meaning": "reject, refuse (+ object directly)",
+      "learned_date": "2026-11-15"
+    },
+    "yuángōng": {
+      "latest": "remembered",
+      "latest_at": "2026-11-16T05:01:00.714Z",
+      "history": [
+        {
+          "result": "remembered",
+          "at": "2026-11-16T05:01:00.714Z"
+        }
+      ],
+      "meaning": "employee (yuán = member, gōng = work)",
+      "learned_date": "2026-11-15"
+    },
+    "shōugòu": {
+      "latest": "forgot",
+      "latest_at": "2026-11-16T05:01:02.414Z",
+      "history": [
+        {
+          "result": "forgot",
+          "at": "2026-11-16T05:01:02.414Z"
+        }
+      ],
+      "meaning": "acquire (a company)",
+      "learned_date": "2026-10-13"
     }
   }
 }
