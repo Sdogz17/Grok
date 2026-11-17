@@ -396,4 +396,13 @@ export const DAYS: StudyDay[] = [
       { pinyin: "dǎsuàn", meaning: "to plan to, intend to (dǎ = do, suàn = calculate)", example: { pinyin: "Jīntiān wǎnshang wǒ dǎsuàn fùxí wǒ wàng le de cí.", english: "Tonight I plan to review the words I forgot." } },
     ],
   },
+  {
+    date: "2026-11-17",
+    count: 1,
+    summary: "Used kěndìng in 'Gēnjù shùjù, xià cì jiéguǒ kěndìng huì gèng hǎo'.",
+    grammar: ["kěndìng huì + adjective or verb = definitely will"],
+    words: [
+      { pinyin: "kěndìng", meaning: "definitely, for sure (kěn = affirm, dìng = fixed)", example: { pinyin: "Gēnjù shùjù, xià cì jiéguǒ kěndìng huì gèng hǎo.", english: "Based on the data, next time the results will definitely be better." } },
+    ],
+  },
 ];
