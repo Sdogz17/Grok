@@ -3,3 +3,8 @@ dist
 .DS_Store
 *.local
 .vite
+android/.gradle
+android/**/build
+android/local.properties
+*.apk
+*.aab

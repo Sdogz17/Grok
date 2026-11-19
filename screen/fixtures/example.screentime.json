@@ -1,0 +1,29 @@
+{
+  "schema": "screentime.v1",
+  "timezone": "Australia/Sydney",
+  "devices": [
+    {
+      "id": "phone",
+      "label": "Example phone",
+      "platform": "android"
+    }
+  ],
+  "days": [
+    {
+      "date": "2026-01-05",
+      "deviceId": "phone",
+      "source": {
+        "kind": "manual",
+        "name": "Typed in",
+        "recordedAt": "2026-01-05T01:00:00.000Z"
+      },
+      "screenInteractiveMs": 3600000,
+      "deviceTotal": {
+        "basis": "typed",
+        "method": "typed",
+        "partial": false,
+        "detail": "Typed into this page. It was not read from a phone."
+      }
+    }
+  ]
+}

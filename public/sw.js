@@ -34,8 +34,8 @@ self.addEventListener("fetch", (event) => {
   if (request.method !== "GET") return;
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
-  // Health is a separate app at /Grok/health/ with its own service worker.
-  if (url.pathname.startsWith("/Grok/health")) return;
+  // Health and Screen are separate apps with their own service workers.
+  if (url.pathname.startsWith("/Grok/health") || url.pathname.startsWith("/Grok/screen")) return;
 
   if (request.mode === "navigate") {
     event.respondWith(networkFirst(request));
