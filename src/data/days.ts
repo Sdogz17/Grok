@@ -405,4 +405,13 @@ export const DAYS: StudyDay[] = [
       { pinyin: "kěndìng", meaning: "definitely, for sure (kěn = affirm, dìng = fixed)", example: { pinyin: "Gēnjù shùjù, xià cì jiéguǒ kěndìng huì gèng hǎo.", english: "Based on the data, next time the results will definitely be better." } },
     ],
   },
+  {
+    date: "2026-11-19",
+    count: 1,
+    summary: "Used wǎnghóng in 'Xià cì wǒmen huì zhǎo yí ge wǎnghóng, dànshì jiéguǒ kěndìng yào kàn tā de yāoqiú'.",
+    grammar: ["yí ge wǎnghóng = an influencer"],
+    words: [
+      { pinyin: "wǎnghóng", meaning: "influencer, internet celebrity (wǎng = internet, hóng = red, popular)", example: { pinyin: "Xià cì wǒmen huì zhǎo yí ge wǎnghóng, dànshì jiéguǒ kěndìng yào kàn tā de yāoqiú.", english: "Next time we'll find an influencer, but the results definitely depend on their requirements." } },
+    ],
+  },
 ];
