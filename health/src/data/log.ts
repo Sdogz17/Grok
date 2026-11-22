@@ -257,6 +257,14 @@ export const WORKOUTS: Workout[] = [
 /* Diet log: add one entry per fully logged day (newest first). All values are estimates. */
 export const DIET_LOG: DietDay[] = [
   {
+    iso: "2026-11-23", date: "Mon 23 Nov", kcal: 430, protein: 35, carbs: 45, fat: 12, burned: null,
+    items: [
+      "Starbucks Turkey Bacon, Cheddar & Egg White sandwich: ~230 kcal, 17 g protein (estimate)",
+      "Tall Starbucks Iced Caramel Protein Matcha: ~200 kcal, ~18 g protein (estimate)",
+      "Note: Eaten on Sun 22 Nov ET, with no clock time. Melbourne is 16 hours ahead, so a meal after 8:00 AM ET is already Mon 23 Nov. kcal and protein are the estimates above (430 kcal, 35 g). Carbs 45 g and fat 12 g are the standard US recipe (sandwich 30 g carbs and 9 g fat, tall drink 15 g carbs and 3 g fat), not a weighed log. The US menu lists the sandwich at 260 kcal and the tall drink at 160 kcal.",
+    ],
+  },
+  {
     iso: "2026-10-30", date: "Fri 30 Oct", kcal: 752, protein: 44, carbs: 15, fat: 57, burned: null,
     items: [
       "Coles Middle Eastern lamb kebabs x6 (whole 450 g pack): 752 kcal, 44 g protein, ~15 g carbs, ~57 g fat, ~15 mg zinc",
