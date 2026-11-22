@@ -152,6 +152,9 @@ export const DAYS: Day[] = [
 ];
 
 export const WORKOUTS: Workout[] = [
+  {iso: "2026-11-22", date: "Sun 22 Nov", time: null, sport: "weightlifting", mins: null, strain: null, avg: null, max: null, kcal: null, notes: "Cable rows 3 sets, pull-ups 3 sets, leg curls 3 sets, cable bicep curls 3 sets, chest-supported rows 2 sets"},
+  {iso: "2026-11-20", date: "Fri 20 Nov", time: "13:11", sport: "tennis", mins: 80, strain: 17.7, avg: null, max: null, kcal: 1050, notes: "WHOOP tagged this weightlifting. It was tennis, 9:11–10:31 PM ET on 19 Nov. Details not logged."},
+  {iso: "2026-11-19", date: "Thu 19 Nov", time: "06:12", sport: "tennis", mins: 50, strain: 12.3, avg: null, max: null, kcal: 540, notes: "WHOOP, 2:12–3:02 PM ET on 18 Nov."},
   {iso: "2026-11-11", date: "Wed 11 Nov", time: null, sport: "weightlifting", mins: null, strain: null, avg: null, max: null, kcal: null, notes: "Chest press 3 sets, lat pulldowns 3 sets, pull-ups 3 sets, dips 3 sets, trap bar trap work 3 sets"},
   {iso: "2026-11-08", date: "Sun 8 Nov", time: null, sport: "weightlifting", mins: null, strain: null, avg: null, max: null, kcal: null, notes: "Incline chest press 3 sets, shoulder lateral raises 3 sets, tricep pushdowns 3 sets, a second chest press 3 sets, trap bar shrugs/trap work 3 sets"},
   {iso: "2026-11-04", date: "Wed 4 Nov", time: "21:11", sport: "weightlifting", mins: 47, strain: 11.8, avg: 127, max: 160, kcal: 301, notes: "Chest-supported rows 3 sets, cable bicep curls 3 sets, lat pulldowns 3 sets, cable rows 2 sets"},
@@ -300,7 +303,7 @@ export const ROUTINE_LOG: RoutineDay[] = [
 
 export const LIFT_GOAL = 4;
 export const LIFT_GOAL_SET = "Mon 26 Oct 2026";
-export const TODAY_ISO = "2026-11-12";
+export const TODAY_ISO = "2026-11-22";
 export const GOOD_SLEEP = 85;
 export const OK_SLEEP = 70;
 export const GOOD_RECOVERY = 67;
