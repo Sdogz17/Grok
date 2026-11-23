@@ -414,4 +414,13 @@ export const DAYS: StudyDay[] = [
       { pinyin: "wǎnghóng", meaning: "influencer, internet celebrity (wǎng = internet, hóng = red, popular)", example: { pinyin: "Xià cì wǒmen huì zhǎo yí ge wǎnghóng, dànshì jiéguǒ kěndìng yào kàn tā de yāoqiú.", english: "Next time we'll find an influencer, but the results definitely depend on their requirements." } },
     ],
   },
+  {
+    date: "2026-11-23",
+    count: 1,
+    summary: "Used hétong in 'Wǒ míngtiān chūchāi, qù qiān hétong'.",
+    grammar: ["measure word fèn", "qiān hétong = sign a contract"],
+    words: [
+      { pinyin: "hétong", meaning: "contract", example: { pinyin: "Wǒ míngtiān chūchāi, qù qiān hétong.", english: "I'm going on a business trip tomorrow to sign the contract." } },
+    ],
+  },
 ];
