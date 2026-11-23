@@ -152,6 +152,7 @@ export const DAYS: Day[] = [
 ];
 
 export const WORKOUTS: Workout[] = [
+  {iso: "2026-11-24", date: "Tue 24 Nov", time: null, sport: "cardio", mins: null, strain: null, avg: null, max: null, kcal: null, notes: "Treadmill Norwegian 4x4, cut short at about 1.5 of 4 intervals. Interval 1 at 9 mph (about 14.5 km/h), interval 2 at 8.6 mph (about 13.8 km/h). Mon 23 Nov ET, no clock time."},
   {iso: "2026-11-22", date: "Sun 22 Nov", time: null, sport: "weightlifting", mins: null, strain: null, avg: null, max: null, kcal: null, notes: "Cable rows 3 sets, pull-ups 3 sets, leg curls 3 sets, cable bicep curls 3 sets, chest-supported rows 2 sets"},
   {iso: "2026-11-20", date: "Fri 20 Nov", time: "13:11", sport: "tennis", mins: 80, strain: 17.7, avg: null, max: null, kcal: 1050, notes: "WHOOP tagged this weightlifting. It was tennis, 9:11–10:31 PM ET on 19 Nov. Details not logged."},
   {iso: "2026-11-19", date: "Thu 19 Nov", time: "06:12", sport: "tennis", mins: 50, strain: 12.3, avg: null, max: null, kcal: 540, notes: "WHOOP, 2:12–3:02 PM ET on 18 Nov."},
@@ -311,7 +312,7 @@ export const ROUTINE_LOG: RoutineDay[] = [
 
 export const LIFT_GOAL = 4;
 export const LIFT_GOAL_SET = "Mon 26 Oct 2026";
-export const TODAY_ISO = "2026-11-22";
+export const TODAY_ISO = "2026-11-24";
 export const GOOD_SLEEP = 85;
 export const OK_SLEEP = 70;
 export const GOOD_RECOVERY = 67;
