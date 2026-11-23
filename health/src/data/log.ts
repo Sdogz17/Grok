@@ -152,8 +152,10 @@ export const DAYS: Day[] = [
 ];
 
 export const WORKOUTS: Workout[] = [
-  {iso: "2026-11-24", date: "Tue 24 Nov", time: null, sport: "cardio", mins: null, strain: null, avg: null, max: null, kcal: null, notes: "Treadmill Norwegian 4x4, cut short at about 1.5 of 4 intervals. Interval 1 at 9 mph (about 14.5 km/h), interval 2 at 8.6 mph (about 13.8 km/h). Mon 23 Nov ET, no clock time."},
-  {iso: "2026-11-22", date: "Sun 22 Nov", time: null, sport: "weightlifting", mins: null, strain: null, avg: null, max: null, kcal: null, notes: "Cable rows 3 sets, pull-ups 3 sets, leg curls 3 sets, cable bicep curls 3 sets, chest-supported rows 2 sets"},
+  {iso: "2026-11-24", date: "Tue 24 Nov", time: "07:03", sport: "cardio", mins: 10, strain: 6.6, avg: 149, max: 171, kcal: 118, notes: "Treadmill Norwegian 4x4, cut short at about 1.5 of 4 intervals. Interval 1 at 9 mph (about 14.5 km/h), interval 2 at 8.6 mph (about 13.8 km/h). Mon 23 Nov, 3:03–3:13 PM ET, 253 m."},
+  {iso: "2026-11-24", date: "Tue 24 Nov", time: "04:38", sport: "tennis", mins: 38, strain: 7.6, avg: 126, max: 163, kcal: 255, notes: "Mon 23 Nov, 12:38–1:17 PM ET."},
+  {iso: "2026-11-23", date: "Mon 23 Nov", time: "02:05", sport: "weightlifting", mins: 51, strain: 11.0, avg: 111, max: 142, kcal: 167, notes: "Cable rows 3 sets, pull-ups 3 sets, leg curls 3 sets, cable bicep curls 3 sets, chest-supported rows 2 sets. Sun 22 Nov, 10:05–10:56 AM ET."},
+  {iso: "2026-11-22", date: "Sun 22 Nov", time: "23:25", sport: "soccer", mins: 116, strain: 17.5, avg: 152, max: 189, kcal: 1379, notes: "Sun 22 Nov, 7:25–9:20 AM ET."},
   {iso: "2026-11-20", date: "Fri 20 Nov", time: "13:11", sport: "tennis", mins: 80, strain: 17.7, avg: null, max: null, kcal: 1050, notes: "WHOOP tagged this weightlifting. It was tennis, 9:11–10:31 PM ET on 19 Nov. Details not logged."},
   {iso: "2026-11-19", date: "Thu 19 Nov", time: "06:12", sport: "tennis", mins: 50, strain: 12.3, avg: null, max: null, kcal: 540, notes: "WHOOP, 2:12–3:02 PM ET on 18 Nov."},
   {iso: "2026-11-11", date: "Wed 11 Nov", time: null, sport: "weightlifting", mins: null, strain: null, avg: null, max: null, kcal: null, notes: "Chest press 3 sets, lat pulldowns 3 sets, pull-ups 3 sets, dips 3 sets, trap bar trap work 3 sets"},
