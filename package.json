@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "dev:health": "vite --config health/vite.config.ts",
-    "build": "tsc --noEmit && vite build && tsc -p health/tsconfig.json --noEmit && vite build --config health/vite.config.ts",
+    "dev:screen": "vite --config screen/vite.config.ts",
+    "build:screen:android": "VITE_SURFACE=android SCREEN_BASE=/assets/ vite build --config screen/vite.config.ts",
+    "test": "vitest run",
+    "build": "tsc --noEmit && vite build && tsc -p health/tsconfig.json --noEmit && vite build --config health/vite.config.ts && tsc -p screen/tsconfig.json --noEmit && vite build --config screen/vite.config.ts",
     "preview": "vite preview --host 127.0.0.1 --port 4173"
   },
   "dependencies": {
@@ -19,6 +22,7 @@
     "@types/react-dom": "^19.2.2",
     "@vitejs/plugin-react": "^5.0.4",
     "typescript": "^5.9.3",
-    "vite": "^7.1.12"
+    "vite": "^7.1.12",
+    "vitest": "^3.2.7"
   }
 }
