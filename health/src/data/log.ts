@@ -152,6 +152,8 @@ export const DAYS: Day[] = [
 ];
 
 export const WORKOUTS: Workout[] = [
+  {iso: "2026-11-26", date: "Thu 26 Nov", time: "23:30", sport: "soccer", mins: 135, strain: 17.0, avg: 145, max: 184, kcal: 1422, notes: "Thu 26 Nov, 7:30–9:45 AM ET."},
+  {iso: "2026-11-25", date: "Wed 25 Nov", time: "10:14", sport: "weightlifting", mins: 78, strain: 12.3, avg: null, max: null, kcal: null, notes: "Incline barbell bench press 3 sets, dumbbell lateral raises 3 sets, pec flies 3 sets, tricep extensions 3 sets, cable lateral raises 3 sets. Tue 24 Nov, 6:14 PM ET."},
   {iso: "2026-11-24", date: "Tue 24 Nov", time: "07:03", sport: "cardio", mins: 10, strain: 6.6, avg: 149, max: 171, kcal: 118, notes: "Treadmill Norwegian 4x4, cut short at about 1.5 of 4 intervals. Interval 1 at 9 mph (about 14.5 km/h), interval 2 at 8.6 mph (about 13.8 km/h). Mon 23 Nov, 3:03–3:13 PM ET, 253 m."},
   {iso: "2026-11-24", date: "Tue 24 Nov", time: "04:38", sport: "tennis", mins: 38, strain: 7.6, avg: 126, max: 163, kcal: 255, notes: "Mon 23 Nov, 12:38–1:17 PM ET."},
   {iso: "2026-11-23", date: "Mon 23 Nov", time: "02:05", sport: "weightlifting", mins: 51, strain: 11.0, avg: 111, max: 142, kcal: 167, notes: "Cable rows 3 sets, pull-ups 3 sets, leg curls 3 sets, cable bicep curls 3 sets, chest-supported rows 2 sets. Sun 22 Nov, 10:05–10:56 AM ET."},
@@ -314,7 +316,7 @@ export const ROUTINE_LOG: RoutineDay[] = [
 
 export const LIFT_GOAL = 4;
 export const LIFT_GOAL_SET = "Mon 26 Oct 2026";
-export const TODAY_ISO = "2026-11-24";
+export const TODAY_ISO = "2026-11-27";
 export const GOOD_SLEEP = 85;
 export const OK_SLEEP = 70;
 export const GOOD_RECOVERY = 67;
